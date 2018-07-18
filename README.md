@@ -1,3 +1,3 @@
 # kayzhou.github.io
 
-Clevaland, this is for you！
+The great Lebron James said, "Lakers, NBA championship!"
