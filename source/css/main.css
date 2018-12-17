@@ -80,7 +80,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
+    /* font-family: monospace, serif; */
     font-size: 1em;
 }
 
@@ -139,7 +139,7 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit;
+    /* font-family: inherit; */
     font-size: 100%;
     margin: 0;
 }
@@ -251,19 +251,14 @@ table {
 }
 
 @font-face {
-    font-family: "Ampersand";
+    /* font-family: "Ampersand"; */
     src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
     unicode-range: U+270C;
 }
 
-@font-face {
-    font-family: "Ampersand";
-    src: local("Georgia");
-    unicode-range: U+270C;
-}
 
 .ampersand-placeholder {
-    font-family: Verdana, sans-serif;
+    /* font-family: Verdana, sans-serif; */
 }
 
 .breakword {
@@ -1708,9 +1703,8 @@ html {
     width: 100%;
     display: inline;
     float: left;
-    width: 83.33333333333334%;
-    margin-left: 8.333333333333334%;
-    margin-right: 8.333333333333334%;
+    margin-left: 8.0%;
+    margin-right: 8.0%;
     margin-bottom: 2em;
 }
 
@@ -1719,7 +1713,7 @@ html {
     width: 100%;
     display: inline;
     float: left;
-    width: 83.33333333333334%;
+    /* width: 83.33333333333334%; */
     margin-left: 8.333333333333334%;
     margin-right: 8.333333333333334%;
     margin-bottom: 2em;
@@ -1880,7 +1874,7 @@ html {
     display: block;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans Narrow', sans-serif;
+    /* font-family: 'PT Sans Narrow', sans-serif; */
     border-bottom: 1px solid #808080;
 }
 
@@ -1981,7 +1975,7 @@ html {
 }
 
 .holder {
-    font-family: 'PT Sans Narrow', sans-serif;
+    /* font-family: 'PT Sans Narrow', sans-serif; */
 }
 
 .holder a {
@@ -2341,7 +2335,7 @@ button::-moz-focus-inner {
     color: white;
     font-style: normal;
     font-size: 28px;
-    font-family: Arial, Baskerville, monospace;
+    /* font-family: Arial, Baskerville, monospace; */
 }
 
 .mfp-close:hover,
@@ -2865,16 +2859,16 @@ screen and (max-height:300px) {
         float: left;
         width: 50%;
         margin-left: 25%;
-        margin-right: 25%;
+        margin-right: 25%
     }
 
     .article-author-top {
         display: block;
         display: inline;
         float: left;
-        width: 23%;
-        margin-left: 4.166666666666667%;
-        margin-right: 4.166666666666667%;
+        width: 20%;
+        margin-left: 2.0%;
+        margin-right: 4.0%;
     }
 
     .article-author-bottom {
@@ -3026,7 +3020,7 @@ screen and (max-height:300px) {
 .pkeywords {
     padding: 3px;
     margin: 3px;
-    color: #000000;
+    color: #666666;
     font-size: 15px
 }
 
