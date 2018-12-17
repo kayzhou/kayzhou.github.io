@@ -29,7 +29,7 @@ audio:not([controls]) {
 }
 
 html {
-    /* font-family: sans-serif; */
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -139,7 +139,7 @@ button,
 input,
 select,
 textarea {
-    /* font-family: inherit; */
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 100%;
     margin: 0;
 }
@@ -251,14 +251,14 @@ table {
 }
 
 @font-face {
-    /* font-family: "Ampersand"; */
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
     unicode-range: U+270C;
 }
 
 
 .ampersand-placeholder {
-    /* font-family: Verdana, sans-serif; */
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 .breakword {
@@ -278,7 +278,7 @@ table {
     margin: inherit;
     padding: inherit;
     font-size: 4em;
-    font-family: inherit;
+    /* font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; */
     line-height: 1;
     text-indent: 0;
     background: transparent;
@@ -572,7 +572,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'PT Sans Narrow', sans-serif;
+    /* font-family: 'PT Sans Narrow', sans-serif; */
     font-weight: 600;
 }
 
@@ -1607,7 +1607,7 @@ select:focus {
 
 html {
     background-color: #ffffff;
-    font-family: 'PT Serif', serif;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-color: #333332;
     font-size: 90%;
 }
@@ -1616,7 +1616,7 @@ html {
     margin: 0 auto;
     width: 120%;
     padding: 2em 0 3em;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 800;
     text-transform: uppercase;
 }
