@@ -12,9 +12,7 @@
   <meta property="og:url" content="http://kayzhou.github.io/index.html">
   <meta property="og:site_name" content="HOMEPAGE OF Zhenkun Zhou">
   <link rel="icon" href="source/logo.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="http://www.gstatic.com/sites/p/47228d/system/app/images/apple-touch-icon.png"
-    type="image/png" />
-
+  <link rel="apple-touch-icon" href="http://www.gstatic.com/sites/p/47228d/system/app/images/apple-touch-icon.png" type="image/png" />
 
   <!-- Webmaster Tools verfication -->
   <meta name="google-site-verification" content="JW0gdx05xcJSQe6saaq67u_U1vgdfuh8OxrjS-fEuyQ">
@@ -23,17 +21,40 @@
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
-  <!-- <meta name="MobileOptimized" content="320"> -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- For all browsers -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./source/css/main.css">
+  <link rel="stylesheet" href="./source/css/font-icon.css">
+
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <link rel="stylesheet" href="/assets/css/ie.css">
+  <![endif]-->
 
   <meta http-equiv="cleartype" content="on">
+
+  <!-- Load Modernizr -->
+  <div class="fit-vids-style">­
+    <style>
+      .fluid-width-video-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 0;
+      }
+
+      .fluid-width-video-wrapper iframe,
+      .fluid-width-video-wrapper object,
+      .fluid-width-video-wrapper embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </div>
+
   <script async="" src="./source/analytics.js"></script>
   <script src="./source/modernizr-2.6.2.custom.min.js"></script>
   <script src="./source/js/bootstrap.js"></script>
@@ -41,166 +62,235 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133430056-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'UA-133430056-1');
   </script>
-</head>
+
+
+  <!-- <style id="style-1-cropbar-clipper">
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+    .en-markup-crop-options {
+      top: 18px !important;
+      left: 50% !important;
+      margin-left: -100px !important;
+      width: 200px !important;
+      border: 2px rgba(255, 255, 255, .38) solid !important;
+      border-radius: 4px !important;
+    }
+
+    .en-markup-crop-options div div:first-of-type {
+      margin-left: 0px !important;
+    }
+  </style>
+</head> -->
+
 <!-- head 结束 -->
 
-<style>
-  body {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-</style>
 
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6">
-        <!-- 关于我 -->
-        <div id="about_me" class="article-wrap" itemprop="text">
-          <article itemscope="" itemtype="http://schema.org/CreativeWork">
-            <h2> Zhenkun Zhou 👨🏻‍💻</h2>
-            <dd>
-              Zhenkun Zhou is a Ph.D. candidate of Computer Science in <a href="http://www.buaa.edu.cn/"
-                target="_blank">Beihang University</a> under supervision of Professor <a
-                href="http://www.nlsde.buaa.edu.cn/~kexu/" target="_blank">Ke Xu</a>.
+<body class="page" itemscope="" itemtype="http://schema.org/WebPage">
+
+  <div id="main" role="main" itemprop="mainContentOfPage">
+    <div class="article-author-top">
+      <img src="./source/zhou.jpg" width="180" height="180">
+      <!-- <img src="./source/zhou.jpg" class="bio-photo" alt="Zhenkun Zhou bio photo" width="100" height="100"> -->
+      <!-- <h4>Zhenkun Zhou</h4> -->
+      <p></p>
+      <font color="#206020" size="3">I'M portraying, understanding and predicting human behaviour &
+        psychology by computational thinking. MY GOAL is to be a computational social scientist.</font>
+      <br />
+
+      <p style="text-indent:0;margin-top:1.5em;" size="3">
+        <a href="mailto:zhenkun91@outlook.com" target="_blank">
+          <i class="glyphicon glyphicon-envelope" aria-hidden=""></i> Email</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="https://scholar.google.com/citations?user=q34mzkwAAAAJ&hl=en" target="_blank">
+          <i class="glyphicon glyphicon-globe" aria-hidden=""></i> Google Scholar</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="https://www.researchgate.net/profile/Zhenkun_Zhou" target="_blank">
+          <i class="glyphicon glyphicon-thumbs-up" aria-hidden=""></i> Researchgate</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="https://github.com/kayzhou" target="_blank">
+          <i class="glyphicon glyphicon-knight" aria-hidden=""></i> Github</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="http://music.163.com/#/user/home?id=61884303" target="_blank">
+          <i class="glyphicon glyphicon-music" aria-hidden=""></i> Netease Music</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="http://kayzhou.github.io/pdf/resume.pdf" target="_blank">
+          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> Curriculum Vitae</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="http://kayzhou.github.io/pdf/resume_zh.pdf" target="_blank">
+          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> 中文简历</a>
+      </p>
+
+      <p style="text-indent:0;margin-top:1.5em;" size="3">
+        <i class="glyphicon glyphicon-flag" aria-hidden=""></i> State Key Lab of Software Development Environment
+        <br />Beihang University, Beijing, China</i>
+      </p>
+
+      <font size="3">Links:</font>
+      <p style="text-indent:0;" size="3">
+        <a href="http://zhaojichang.cn" target="_blank">
+          <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Jichang Zhao's Group</a>
+      </p>
+
+      <br />
+
+      <!-- <a href="http://kayzhou.github.io/pdf/CV_Zhenkun.pdf" target="_blank"><font color='red'>→ Download my CV*. </font></a> -->
+
+    </div>
+
+    <!-- 关于我 -->
+    <article itemscope="" itemtype="http://schema.org/CreativeWork">
+
+      <div id="about_me" class="article-wrap" itemprop="text">
+        <h2> Zhenkun Zhou 👨🏻‍💻</h2>
+        <br />
+        <!-- <img src="./source/zhou.jpg" class="floatpic"> -->
+
+        <p>
+          <!-- <p> -->
+            <!-- <font color="FB3E15">周振坤祝家人们猪年大吉，万事如意 :) 遥祝家里的老人福如东海，寿比南山，工作的事业蒸蒸日上，学习的学有所成！</font> -->
+
+            <p>Zhenkun Zhou is a Ph.D. candidate of Computer Science in <a href="http://www.buaa.edu.cn/"
+                target="_blank">Beihang University</a> under supervision of Professor <a href="http://www.nlsde.buaa.edu.cn/~kexu/"
+                target="_blank">Ke Xu</a>.
               From 2018, he has been visiting Levich Institute, City College of New York, under supervision of
               Professor <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">Hernan Makse</a>.
               His research focuses on <i>computational social science,</i> <i>social networks</i> and <i>machine
                 learning</i>.
-            </dd>
-            <br />
-            <dd>
 
-              He also works as an intern researcher and big-data engineer <a href="https://wordemotion.com/"
-                target="_blank">in
-                Company of Warming Technology</a>, in charge of analyzing online social networks and stock
-              markets.
-            </dd>
-            <br />
+              <p> He also works as an intern researcher and big-data engineer <a href="https://wordemotion.com/" target="_blank">in
+                  Company of Warming Technology</a>, in charge of analyzing online social networks and stock
+                markets.
+                <br />
+                <br />
+      </div>
+      <!-- 关于我 结束 -->
 
-          </article>
-        </div>
-        <!-- 关于我 结束 -->
-        <!-- 发表 -->
-        <div id="publication" class="article-wrap" itemprop="text">
-          <h3>Selected Publications</h3>
 
-          <div class="paper">
-            <div class="pimg">
-              <img src="./source/together.jpg">
+      <!-- 发表 -->
+      <div id="publication" class="article-wrap" itemprop="text">
+        <h3>Selected Publications</h3>
+
+        <div class="paper">
+          <div class="pimg">
+            <img src="./source/together.jpg">
+          </div>
+          <div class="ptitle">Homophily of Music Listening in Online Social Networks of China</div>
+          <div class="pvenue">
+            <i>Social Networks</i>, Volume 55, October 2018, Pages 160-169</div>
+          <div class="plinks">
+            <div class="plink">
+              <a href="https://www.sciencedirect.com/science/article/pii/S0378873317304604" target="_blank">[Online]</a>
             </div>
-            <div class="ptitle">Homophily of Music Listening in Online Social Networks of China</div>
-            <div class="pvenue">
-              <i>Social Networks</i>, Volume 55, October 2018, Pages 160-169</div>
-            <div class="plinks">
-              <div class="plink">
-                <a href="https://www.sciencedirect.com/science/article/pii/S0378873317304604"
-                  target="_blank">[Online]</a>
-              </div>
-              <div class="plink">
-                <a href="https://kayzhou.github.com/pdf/Homophily_of_Music_Listening_in_Online_Social_Networks.pdf"
-                  target="_blank">[PDF]</a>
-              </div>
-              <!-- <div class="plink">
+            <div class="plink">
+              <a href="https://kayzhou.github.com/pdf/Homophily_of_Music_Listening_in_Online_Social_Networks.pdf"
+                target="_blank">[PDF]</a>
+            </div>
+            <!-- <div class="plink">
                 <a href="http://cseweb.ucsd.edu/~haosu/slides/3dv.pdf">[DATA]</a>
               </div> -->
-            </div>
-            <div class="pkeywords">
-              <!-- The analyzing results in this manuscript demonstrate that the humans linked by online social networks
+          </div>
+          <div class="pkeywords">
+            <!-- The analyzing results in this manuscript demonstrate that the humans linked by online social networks
               indeed appreciate the identical songs
               and have the similar music preferences. -->
-            </div>
           </div>
+        </div>
+      </div>
 
-          <div class="paper">
-            <div class="pimg">
-              <img src="./source/extroverts.png">
-            </div>
-            <div class="ptitle">Extroverts Tweet Differently from Introverts in Weibo</div>
-            <div class="pvenue">
-              <i><a href="https://epjdatascience.springeropen.com/" target="_blank">EPJ Data Science</a></i>, 2018. 7:18
-            </div>
-            <div class="plinks">
-              <div class="plink">
-                <a href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-018-0146-8"
-                  target="_blank">[Online]</a>
-              </div>
-              <div class="plink">
-                <a href="https://epjdatascience.springeropen.com/track/pdf/10.1140/epjds/s13688-018-0146-8"
-                  target="_blank">[PDF]</a>
-              </div>
-              <div class="plink">
-                <a href="https://figshare.com/articles/Extroverts_tweet_differently_from_introverts_in_Weibo/4765150/1"
-                  target="_blank">[DATA]</a>
-              </div>
-            </div>
-            <!-- <div class="pkeywords">
+      <div class="paper">
+        <div class="pimg">
+          <img src="./source/extroverts.png">
+        </div>
+        <div class="ptitle">Extroverts Tweet Differently from Introverts in Weibo</div>
+        <div class="pvenue">
+          <i><a href="https://epjdatascience.springeropen.com/" target="_blank">EPJ Data Science</a></i>, 2018. 7:18
+        </div>
+        <div class="plinks">
+          <div class="plink">
+            <a href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-018-0146-8" target="_blank">[Online]</a>
+          </div>
+          <div class="plink">
+            <a href="https://epjdatascience.springeropen.com/track/pdf/10.1140/epjds/s13688-018-0146-8" target="_blank">[PDF]</a>
+          </div>
+          <div class="plink">
+            <a href="https://figshare.com/articles/Extroverts_tweet_differently_from_introverts_in_Weibo/4765150/1"
+              target="_blank">[DATA]</a>
+          </div>
+        </div>
+        <!-- <div class="pkeywords">
             Use synthetic data to train learning algorithms for applications such as viewpoint estimation, human pose estimation, and
             robot perception. Based upon 5 recent papers of mine.
           </div> -->
-          </div>
+      </div>
 
-          <div class="paper">
-            <div class="pimg">
-              <img src="./source/tale_of.jpg">
-            </div>
-            <div class="ptitle">Tales of Emotion and Stock in China: Volatility, Causality and Prediction</div>
-            <div class="pvenue">
-              <i>World Wide Web</i>, 2017.</div>
-            <div class="plinks">
-              <div class="plink">
-                <a href="https://link.springer.com/article/10.1007/s11280-017-0495-4" target="_blank">[Online]</a>
-              </div>
-              <div class="plink">
-                <a href="http://kayzhou.github.io/pdf/Tales_of_Emotion_and_Stock_in_China.pdf" target="_blank">[PDF]</a>
-              </div>
-            </div>
+      <div class="paper">
+        <div class="pimg">
+          <img src="./source/tale_of.jpg">
+        </div>
+        <div class="ptitle">Tales of Emotion and Stock in China: Volatility, Causality and Prediction</div>
+        <div class="pvenue">
+          <i>World Wide Web</i>, 2017.</div>
+        <div class="plinks">
+          <div class="plink">
+            <a href="https://link.springer.com/article/10.1007/s11280-017-0495-4" target="_blank">[Online]</a>
           </div>
+          <div class="plink">
+            <a href="http://kayzhou.github.io/pdf/Tales_of_Emotion_and_Stock_in_China.pdf" target="_blank">[PDF]</a>
+          </div>
+        </div>
+      </div>
 
-          <div class="paper">
-            <div class="pimg">
-              <img src="./source/can_online.png">
+      <div class="paper">
+        <div class="pimg">
+          <img src="./source/can_online.png">
+        </div>
+        <div class="ptitle">Can Online Emotions Predict the Stock Market in China?</div>
+        <div class="pvenue">
+          <i>Web Information Systems Engineering (WISE)</i>, 2016.
+        </div>
+        <div class="pvenue">
+          <font color="red"> *Best Paper Award Honorable Mention</font>
+        </div>
+        <br />
+        <div class="plinks">
+          <div class="plink">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-319-48740-3_24" target="_blank"">[Online]</a>
             </div>
-            <div class="ptitle">Can Online Emotions Predict the Stock Market in China?</div>
-            <div class="pvenue">
-              <i>Web Information Systems Engineering (WISE)</i>, 2016.
-            </div>
-            <div class="pvenue">
-              <font color="red"> *Best Paper Award Honorable Mention</font>
-            </div>
-            <br />
-            <div class="plinks">
-              <div class="plink">
-                <a href="https://link.springer.com/chapter/10.1007/978-3-319-48740-3_24" target="_blank"">[Online]</a>
-            </div>
-              <div class=" plink">
-                  <a href="http://kayzhou.github.io/pdf/Can_Online_Emotions_Predict_the_Stock_Market_in_China.pdf"
-                    target="_blank">[PDF]</a>
-              </div>
-            </div>
-            <!-- <div class="pkeywords">
+              <div class="
+              plink">
+              <a href="http://kayzhou.github.io/pdf/Can_Online_Emotions_Predict_the_Stock_Market_in_China.pdf" target="_blank">[PDF]</a>
+          </div>
+        </div>
+        <!-- <div class="pkeywords">
             Use synthetic data to train learning algorithms for applications such as viewpoint estimation, human pose estimation, and
             robot perception. Based upon 5 recent papers of mine.
           </div> -->
-          </div>
+      </div>
 
-          <div class="paper">
-            <div class="pimg">
-              <img src="./source/music-artists.jpg">
-            </div>
-            <div class="ptitle">Dance music joints musicians of different genres</div>
-            <div class="pvenue">
-              <a href="http://www.netscix2018.net/"><i>NetSciX</i>, 2018. Accepted</a></div>
-            <!-- <div class="plinks">
+      <div class="paper">
+        <div class="pimg">
+          <img src="./source/music-artists.jpg">
+        </div>
+        <div class="ptitle">Dance music joints musicians of different genres</div>
+        <div class="pvenue">
+          <a href="http://www.netscix2018.net/"><i>NetSciX</i>, 2018. Accepted</a></div>
+        <!-- <div class="plinks">
               <div class="plink">
                 <a href="http://cseweb.ucsd.edu/~haosu/slides/3dv.pptx">[PDF]</a>
               </div>
@@ -208,24 +298,23 @@
                 <a href="http://cseweb.ucsd.edu/~haosu/slides/3dv.pdf">[DATA]</a>
               </div>
             </div> -->
-            <div class="pkeywords">
-              Through systematically studying the collaboration network of musicians, we conclude that dance music plays
-              an essential role in promoting the collaboration of musicians in music creation.
-            </div>
-          </div>
-          <!-- 发表 结束 -->
+        <div class="pkeywords">
+          Through systematically studying the collaboration network of musicians, we conclude that dance music plays
+          an essential role in promoting the collaboration of musicians in music creation.
         </div>
+      </div>
+      <!-- 发表 结束 -->
 
-        <!-- 正在进行的 -->
-        <div id="working_project" class="article-wrap" itemprop="text">
-          <h3>Working Projects</h3>
-          <div class="paper">
-            <div class="pimg">
-              <img src="./source/brain.jpg">
-            </div>
-            <div class="ptitle">How Brainwashing Songs Wash the Brain</div>
-            <!-- <div class="pvenue">Invited talk at NIPS workshop on 3D Deep Learning</div> -->
-            <!-- <div class="plinks">
+      <!-- 正在进行的 -->
+      <div id="working_project" class="article-wrap" itemprop="text">
+        <h3>Working Projects</h3>
+        <div class="paper">
+          <div class="pimg">
+            <img src="./source/brain.jpg">
+          </div>
+          <div class="ptitle">How Brainwashing Songs Wash the Brain</div>
+          <!-- <div class="pvenue">Invited talk at NIPS workshop on 3D Deep Learning</div> -->
+          <!-- <div class="plinks">
                   <div class="plink">
                     <a href="http://cseweb.ucsd.edu/~haosu/slides/NIPS16_3DDL.pptx">PPTX</a>
                   </div>
@@ -233,21 +322,20 @@
                     <a href="http://cseweb.ucsd.edu/~haosu/slides/NIPS16_3DDL.pdf">PDF</a>
                   </div>
                 </div> -->
-            <div class="pkeywords">
-              The study explores the method to recognize those "brainwashing" songs and try to find an effective and
-              accurate way to predict
-              the popularity of songs. In addition, through the EEG experiment, the research verifies that
-              brainwiashing
-              songs could have some impact on human brain.
-            </div>
+          <div class="pkeywords">
+            The study explores the method to recognize those "brainwashing" songs and try to find an effective and
+            accurate way to predict
+            the popularity of songs. In addition, through the EEG experiment, the research verifies that brainwiashing
+            songs could have some impact on human brain.
           </div>
-          <div class="paper">
-            <div class="pimg">
-              <img src="./source/loom.jpg">
-            </div>
-            <div class="ptitle">Losses Loom Larger than Gains in Social Media</div>
-            <!-- <div class="pvenue">Invited talk at 3DV workshop on Understanding 3D and Visuo-Motor Learning</div> -->
-            <!-- <div class="plinks">
+        </div>
+        <div class="paper">
+          <div class="pimg">
+            <img src="./source/loom.jpg">
+          </div>
+          <div class="ptitle">Losses Loom Larger than Gains in Social Media</div>
+          <!-- <div class="pvenue">Invited talk at 3DV workshop on Understanding 3D and Visuo-Motor Learning</div> -->
+          <!-- <div class="plinks">
                   <div class="plink">
                     <a href="http://cseweb.ucsd.edu/~haosu/slides/3dv.pptx">PPTX</a>
                   </div>
@@ -255,14 +343,15 @@
                     <a href="http://cseweb.ucsd.edu/~haosu/slides/3dv.pdf">PDF</a>
                   </div>
                 </div> -->
-            <div class="pkeywords">
-              This research investigates the association between stock market and corresponding online behaviors in
-              social media. It is revealed that people are not only sensitive to losses than to gains, but also attach
-              great importance to losses, which
-              demonstrate the robustness of the sensitive and attentional effect of losses.
-            </div>
+          <div class="pkeywords">
+            This research investigates the association between stock market and corresponding online behaviors in
+            social media. It is revealed that people are not only sensitive to losses than to gains, but also attach
+            great importance to losses, which
+            demonstrate the robustness of the sensitive and attentional effect of losses.
           </div>
         </div>
+
+        <!-- 正在进行的 结束-->
 
         <!-- 应用 -->
         <div id="application" class="article-wrap" itemprop="text">
@@ -287,8 +376,7 @@
               </div> -->
             </div>
             <div class="pkeywords">
-              This project is collecting kinds of real-time data in Netease Music platform, including the massive
-              user
+              This project is collecting kinds of real-time data in Netease Music platform, including the massive user
               listening behaivor.
               Through online analyzing the indivdual and collective listening records, we uncover ''WHO ARE U'' in
               music.
@@ -334,77 +422,30 @@
             <div class="pkeywords">
               Cyberpsychology, Behavior, and Social Networking (IF=2.571), PLoS One (IF=2.766)
               <br />
-              <font color="white">Many thanks for the support from my parents Zhou and Lang and grilfriend Gong
-                Linan! 我是孤独演说家～～ 带着面具去表达～～～</font>
+              <font color="white">Many thanks for the support from my parents Zhou and Lang and grilfriend Gong Linan! 我是孤独演说家～～ 带着面具去表达～～～</font>
             </div>
           </div>
 
         </div>
-      </div>
-      <div class="col-md-3">
-          <img src="./source/zhou.jpg" width="180" height="180">
-          <!-- <img src="./source/zhou.jpg" class="bio-photo" alt="Zhenkun Zhou bio photo" width="100" height="100"> -->
-          <!-- <h4>Zhenkun Zhou</h4> -->
-          <p></p>
-          <font color="#206020" size="2">I'M portraying, understanding and predicting human behaviour &
-            psychology by computational thinking. MY GOAL is to be a computational social scientist.</font>
-          <br />
-
-          <p style="text-indent:0;margin-top:1.5em;" size="3">
-            <a href="mailto:zhenkun91@outlook.com" target="_blank">
-              <i class="glyphicon glyphicon-envelope" aria-hidden=""></i> Email</a>
-          </p>
-
-          <p style="text-indent:0;" size="3">
-            <a href="https://scholar.google.com/citations?user=q34mzkwAAAAJ&hl=en" target="_blank">
-              <i class="glyphicon glyphicon-globe" aria-hidden=""></i> Google Scholar</a>
-          </p>
-
-          <p style="text-indent:0;" size="3">
-            <a href="https://www.researchgate.net/profile/Zhenkun_Zhou" target="_blank">
-              <i class="glyphicon glyphicon-thumbs-up" aria-hidden=""></i> Researchgate</a>
-          </p>
-
-          <p style="text-indent:0;" size="3">
-            <a href="https://github.com/kayzhou" target="_blank">
-              <i class="glyphicon glyphicon-knight" aria-hidden=""></i> Github</a>
-          </p>
-
-          <p style="text-indent:0;" size="3">
-            <a href="http://music.163.com/#/user/home?id=61884303" target="_blank">
-              <i class="glyphicon glyphicon-music" aria-hidden=""></i> Netease Music</a>
-          </p>
-
-          <p style="text-indent:0;" size="3">
-            <a href="http://kayzhou.github.io/pdf/resume.pdf" target="_blank">
-              <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> Curriculum Vitae</a>
-          </p>
-
-          <p style="text-indent:0;" size="3">
-            <a href="http://kayzhou.github.io/pdf/resume_zh.pdf" target="_blank">
-              <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> 中文简历</a>
-          </p>
-
-          <p style="text-indent:0;margin-top:1.5em;" size="3">
-            <i class="glyphicon glyphicon-flag" aria-hidden=""></i> State Key Lab of Software Development
-            Environment
-            <br />Beihang University, Beijing, China</i>
-          </p>
-
-          <font size="3">Links:</font>
-          <p style="text-indent:0;" size="3">
-            <a href="http://zhaojichang.cn" target="_blank">
-              <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Jichang Zhao's Group</a>
-          </p>
-
-          <br />
-
-          <!-- <a href="http://kayzhou.github.io/pdf/CV_Zhenkun.pdf" target="_blank"><font color='red'>→ Download my CV*. </font></a> -->
 
       </div>
-    </div>
+      <!-- <div id=CV class="article-wrap" itemprop="text"> -->
+      <!-- <a href="http://kayzhou.github.io/pdf/CV_Zhenkun.pdf" target="_blank"><font color='BlueViolet'>→ Click to download my CV. </font></a> -->
+      <!-- </div> -->
+
+    </article>
+
+
   </div>
   <!-- /#index -->
+
+  <script src="./source/jquery.min.js"></script>
+  <!-- <script>
+      window.jQuery || document.write(
+        '<script src="http://jasonansel.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script> -->
+  <script src="./source/main.min.js"></script>
+
 
 </body>
 
