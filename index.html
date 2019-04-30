@@ -30,6 +30,30 @@
   <!--[if (lt IE 9) & (!IEMobile)]>
   <link rel="stylesheet" href="/assets/css/ie.css">
   <![endif]-->
+
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- Load Modernizr -->
+  <div class="fit-vids-style">­
+    <style>
+      .fluid-width-video-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 0;
+      }
+
+      .fluid-width-video-wrapper iframe,
+      .fluid-width-video-wrapper object,
+      .fluid-width-video-wrapper embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </div>
+
   <script src="./source/jquery.min.js"></script>
   <!-- <script>
       window.jQuery || document.write(
@@ -53,14 +77,76 @@
   </script>
 </head>
 
-<body>
+<body class="page" itemscope="" itemtype="http://schema.org/WebPage">
+  <div id="main" role="main" itemprop="mainContentOfPage">
+    <div class="article-author-top">
+      <img src="./source/zhou.jpg" width="180" height="180">
+      <!-- <img src="./source/zhou.jpg" class="bio-photo" alt="Zhenkun Zhou bio photo" width="100" height="100"> -->
+      <!-- <h4>Zhenkun Zhou</h4> -->
+      <p></p>
+      <font color="#206020" size="2">I'M portraying, understanding and predicting human behaviour &
+        psychology by computational thinking. MY GOAL is to be a computational social scientist.</font>
+      <br />
 
-  <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-9">
-              <!-- 关于我 -->
-    <article>
-      <div id="about_me" class="article-wrap" itemprop="text" style="width: 60%;">
+      <p style="text-indent:0;margin-top:1.5em;" size="3">
+        <a href="mailto:zhenkun91@outlook.com" target="_blank">
+          <i class="glyphicon glyphicon-envelope" aria-hidden=""></i> Email</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="https://scholar.google.com/citations?user=q34mzkwAAAAJ&hl=en" target="_blank">
+          <i class="glyphicon glyphicon-globe" aria-hidden=""></i> Google Scholar</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="https://www.researchgate.net/profile/Zhenkun_Zhou" target="_blank">
+          <i class="glyphicon glyphicon-thumbs-up" aria-hidden=""></i> Researchgate</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="https://github.com/kayzhou" target="_blank">
+          <i class="glyphicon glyphicon-knight" aria-hidden=""></i> Github</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="http://music.163.com/#/user/home?id=61884303" target="_blank">
+          <i class="glyphicon glyphicon-music" aria-hidden=""></i> Netease Music</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="http://kayzhou.github.io/pdf/resume.pdf" target="_blank">
+          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> CV</a>
+      </p>
+
+      <p style="text-indent:0;" size="3">
+        <a href="http://kayzhou.github.io/pdf/resume_zh.pdf" target="_blank">
+          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> 中文简历</a>
+      </p>
+
+      <p style="text-indent:0;margin-top:1.5em;" size="3">
+        <i class="glyphicon glyphicon-flag" aria-hidden=""></i> State Key Lab of Software Development Environment
+        <br />Beihang University, Beijing, China</i>
+      </p>
+
+      <font size="3">Links:</font>
+      <p style="text-indent:0;" size="3">
+        <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">
+          <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Hernan Makse's Lab</a>
+      </p>
+      <p style="text-indent:0;" size="3">
+        <a href="http://zhaojichang.cn" target="_blank">
+          <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Jichang Zhao's Group</a>
+      </p>
+
+      <br />
+
+      <!-- <a href="http://kayzhou.github.io/pdf/CV_Zhenkun.pdf" target="_blank"><font color='red'>→ Download my CV*. </font></a> -->
+
+    </div>
+
+    <!-- 关于我 -->
+    <article itemscope="" itemtype="http://schema.org/CreativeWork" >
+      <div id="about_me" class="article-wrap" itemprop="text" style="width: 100%;">
         <h2> Zhenkun Zhou 👨🏻‍💻</h2>
         <br />
         <!-- <img src="./source/zhou.jpg" class="floatpic"> -->
@@ -342,81 +428,6 @@
       <!-- </div> -->
 
     </article>
-        </div>
-        <div class="col-md-3">
-            <div id="main" role="main" itemprop="mainContentOfPage">
-                <div class="article-author-top">
-                  <img src="./source/zhou.jpg" width="180" height="180">
-                  <!-- <img src="./source/zhou.jpg" class="bio-photo" alt="Zhenkun Zhou bio photo" width="100" height="100"> -->
-                  <!-- <h4>Zhenkun Zhou</h4> -->
-                  <p></p>
-                  <font color="#206020" size="2">I'M portraying, understanding and predicting human behaviour &
-                    psychology by computational thinking. MY GOAL is to be a computational social scientist.</font>
-                  <br />
-            
-                  <p style="text-indent:0;margin-top:1.5em;" size="3">
-                    <a href="mailto:zhenkun91@outlook.com" target="_blank">
-                      <i class="glyphicon glyphicon-envelope" aria-hidden=""></i> Email</a>
-                  </p>
-            
-                  <p style="text-indent:0;" size="3">
-                    <a href="https://scholar.google.com/citations?user=q34mzkwAAAAJ&hl=en" target="_blank">
-                      <i class="glyphicon glyphicon-globe" aria-hidden=""></i> Google Scholar</a>
-                  </p>
-            
-                  <p style="text-indent:0;" size="3">
-                    <a href="https://www.researchgate.net/profile/Zhenkun_Zhou" target="_blank">
-                      <i class="glyphicon glyphicon-thumbs-up" aria-hidden=""></i> Researchgate</a>
-                  </p>
-            
-                  <p style="text-indent:0;" size="3">
-                    <a href="https://github.com/kayzhou" target="_blank">
-                      <i class="glyphicon glyphicon-knight" aria-hidden=""></i> Github</a>
-                  </p>
-            
-                  <p style="text-indent:0;" size="3">
-                    <a href="http://music.163.com/#/user/home?id=61884303" target="_blank">
-                      <i class="glyphicon glyphicon-music" aria-hidden=""></i> Netease Music</a>
-                  </p>
-            
-                  <p style="text-indent:0;" size="3">
-                    <a href="http://kayzhou.github.io/pdf/resume.pdf" target="_blank">
-                      <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> CV</a>
-                  </p>
-            
-                  <p style="text-indent:0;" size="3">
-                    <a href="http://kayzhou.github.io/pdf/resume_zh.pdf" target="_blank">
-                      <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> 中文简历</a>
-                  </p>
-            
-                  <p style="text-indent:0;margin-top:1.5em;" size="3">
-                    <i class="glyphicon glyphicon-flag" aria-hidden=""></i> State Key Lab of Software Development Environment
-                    <br />Beihang University, Beijing, China</i>
-                  </p>
-            
-                  <font size="3">Links:</font>
-                  <p style="text-indent:0;" size="3">
-                    <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">
-                      <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Hernan Makse's Lab</a>
-                  </p>
-                  <p style="text-indent:0;" size="3">
-                    <a href="http://zhaojichang.cn" target="_blank">
-                      <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Jichang Zhao's Group</a>
-                  </p>
-            
-                  <br />
-            
-                  <!-- <a href="http://kayzhou.github.io/pdf/CV_Zhenkun.pdf" target="_blank"><font color='red'>→ Download my CV*. </font></a> -->
-            
-                </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
 
 
   </div>
