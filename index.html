@@ -54,6 +54,12 @@
     </style>
   </div>
 
+  <script src="./source/jquery.min.js"></script>
+  <!-- <script>
+      window.jQuery || document.write(
+        '<script src="http://jasonansel.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script> -->
+  <script src="./source/main.min.js"></script>
   <script async="" src="./source/analytics.js"></script>
   <script src="./source/modernizr-2.6.2.custom.min.js"></script>
   <script src="./source/js/bootstrap.js"></script>
@@ -61,35 +67,17 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133430056-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-133430056-1');
   </script>
-
-
-  <!-- <style id="style-1-cropbar-clipper">
-    /* Copyright 2014 Evernote Corporation. All rights reserved. */
-    .en-markup-crop-options {
-      top: 18px !important;
-      left: 50% !important;
-      margin-left: -100px !important;
-      width: 200px !important;
-      border: 2px rgba(255, 255, 255, .38) solid !important;
-      border-radius: 4px !important;
-    }
-
-    .en-markup-crop-options div div:first-of-type {
-      margin-left: 0px !important;
-    }
-  </style>
-</head> -->
-
-<!-- head 结束 -->
-
+</head>
 
 <body class="page" itemscope="" itemtype="http://schema.org/WebPage">
-
   <div id="main" role="main" itemprop="mainContentOfPage">
     <div class="article-author-top">
       <img src="./source/zhou.jpg" width="180" height="180">
@@ -127,7 +115,7 @@
 
       <p style="text-indent:0;" size="3">
         <a href="http://kayzhou.github.io/pdf/resume.pdf" target="_blank">
-          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> Curriculum Vitae</a>
+          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> CV</a>
       </p>
 
       <p style="text-indent:0;" size="3">
@@ -142,8 +130,8 @@
 
       <font size="3">Links:</font>
       <p style="text-indent:0;" size="3">
-          <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">
-            <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Hernan Makse's Lab</a>
+        <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">
+          <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Hernan Makse's Lab</a>
       </p>
       <p style="text-indent:0;" size="3">
         <a href="http://zhaojichang.cn" target="_blank">
@@ -157,30 +145,30 @@
     </div>
 
     <!-- 关于我 -->
-    <article itemscope="" itemtype="http://schema.org/CreativeWork">
-
-      <div id="about_me" class="article-wrap" itemprop="text">
+    <article itemscope="" itemtype="http://schema.org/CreativeWork" >
+      <div id="about_me" class="article-wrap" itemprop="text" style="width: 60%;">
         <h2> Zhenkun Zhou 👨🏻‍💻</h2>
         <br />
         <!-- <img src="./source/zhou.jpg" class="floatpic"> -->
 
         <p>
           <!-- <p> -->
-            <!-- <font color="FB3E15">周振坤祝家人们猪年大吉，万事如意 :) 遥祝家里的老人福如东海，寿比南山，工作的事业蒸蒸日上，学习的学有所成！</font> -->
+          <!-- <font color="FB3E15">周振坤祝家人们猪年大吉，万事如意 :) 遥祝家里的老人福如东海，寿比南山，工作的事业蒸蒸日上，学习的学有所成！</font> -->
 
-            <p>Zhenkun Zhou is a Ph.D. candidate of Computer Science in <a href="http://www.buaa.edu.cn/"
-                target="_blank">Beihang University</a> under supervision of Professor <a href="http://www.nlsde.buaa.edu.cn/~kexu/"
-                target="_blank">Ke Xu</a>.
-              From 2018, he has been visiting Levich Institute, City College of New York, under supervision of
-              Professor <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">Hernan Makse</a>.
-              His research focuses on <i>computational social science,</i> <i>social networks</i> and <i>machine
-                learning</i>.
+          <p>Zhenkun Zhou is a Ph.D. candidate of Computer Science in <a href="http://www.buaa.edu.cn/"
+              target="_blank">Beihang University</a> under supervision of Professor <a
+              href="http://www.nlsde.buaa.edu.cn/~kexu/" target="_blank">Ke Xu</a>.
+            From 2018, he has been visiting Levich Institute, City College of New York, under supervision of
+            Professor <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">Hernan Makse</a>.
+            His research focuses on <i>computational social science,</i> <i>social networks</i> and <i>machine
+              learning</i>.
 
-              <p> He also works as an intern researcher and big-data engineer <a href="https://wordemotion.com/" target="_blank">in
-                  Company of Warming Technology</a>, in charge of analyzing online social networks and stock
-                markets.
-                <br />
-                <br />
+            <p> He also works as an intern researcher and big-data engineer <a href="https://wordemotion.com/"
+                target="_blank">in
+                Company of Warming Technology</a>, in charge of analyzing online social networks and stock
+              markets.
+              <br />
+              <br />
       </div>
       <!-- 关于我 结束 -->
 
@@ -226,10 +214,12 @@
         </div>
         <div class="plinks">
           <div class="plink">
-            <a href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-018-0146-8" target="_blank">[Online]</a>
+            <a href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-018-0146-8"
+              target="_blank">[Online]</a>
           </div>
           <div class="plink">
-            <a href="https://epjdatascience.springeropen.com/track/pdf/10.1140/epjds/s13688-018-0146-8" target="_blank">[PDF]</a>
+            <a href="https://epjdatascience.springeropen.com/track/pdf/10.1140/epjds/s13688-018-0146-8"
+              target="_blank">[PDF]</a>
           </div>
           <div class="plink">
             <a href="https://figshare.com/articles/Extroverts_tweet_differently_from_introverts_in_Weibo/4765150/1"
@@ -275,9 +265,9 @@
           <div class="plink">
             <a href="https://link.springer.com/chapter/10.1007/978-3-319-48740-3_24" target="_blank"">[Online]</a>
             </div>
-              <div class="
-              plink">
-              <a href="http://kayzhou.github.io/pdf/Can_Online_Emotions_Predict_the_Stock_Market_in_China.pdf" target="_blank">[PDF]</a>
+              <div class=" plink">
+              <a href="http://kayzhou.github.io/pdf/Can_Online_Emotions_Predict_the_Stock_Market_in_China.pdf"
+                target="_blank">[PDF]</a>
           </div>
         </div>
         <!-- <div class="pkeywords">
@@ -425,7 +415,8 @@
             <div class="pkeywords">
               Cyberpsychology, Behavior, and Social Networking (IF=2.571), PLoS One (IF=2.766)
               <br />
-              <font color="white">Many thanks for the support from my parents Zhou and Lang and grilfriend Gong Linan! 我是孤独演说家～～ 带着面具去表达～～～</font>
+              <font color="white">Many thanks for the support from my parents Zhou and Lang and grilfriend Gong Linan!
+                我是孤独演说家～～ 带着面具去表达～～～</font>
             </div>
           </div>
 
@@ -440,16 +431,6 @@
 
 
   </div>
-  <!-- /#index -->
-
-  <script src="./source/jquery.min.js"></script>
-  <!-- <script>
-      window.jQuery || document.write(
-        '<script src="http://jasonansel.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')
-    </script> -->
-  <script src="./source/main.min.js"></script>
-
-
 </body>
 
 </html>
