@@ -10,8 +10,8 @@
   <meta property="og:title" content="zhenkun zhou">
   <meta property="og:description" content="zhenkun zhou">
   <meta property="og:url" content="http://kayzhou.github.io/index.html">
-  <meta property="og:site_name" content="Zhenkun Zhou's Homepage">
-  <link rel="icon" href="https://img.icons8.com/color/50/000000/steve-jobs.png">
+  <meta property="og:site_name" content="HOMEPAGE OF Zhenkun Zhou">
+  <link rel="icon" href="https://img.icons8.com/color/50/000000/steve-jobs.png">" type="image/x-icon">
 
   <!-- Webmaster Tools verfication -->
   <meta name="google-site-verification" content="JW0gdx05xcJSQe6saaq67u_U1vgdfuh8OxrjS-fEuyQ">
@@ -23,9 +23,6 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
   <!-- For all browsers -->
   <link rel="stylesheet" href="./source/css/main.css">
   <link rel="stylesheet" href="./source/css/font-icon.css">
@@ -35,6 +32,28 @@
   <![endif]-->
 
   <meta http-equiv="cleartype" content="on">
+
+  <!-- Load Modernizr -->
+  <div class="fit-vids-style">­
+    <style>
+      .fluid-width-video-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 0;
+      }
+
+      .fluid-width-video-wrapper iframe,
+      .fluid-width-video-wrapper object,
+      .fluid-width-video-wrapper embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </div>
+
   <script async="" src="./source/analytics.js"></script>
   <script src="./source/modernizr-2.6.2.custom.min.js"></script>
   <script src="./source/js/bootstrap.js"></script>
@@ -47,11 +66,30 @@
 
     gtag('config', 'UA-133430056-1');
   </script>
-</head>
+
+
+  <!-- <style id="style-1-cropbar-clipper">
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+    .en-markup-crop-options {
+      top: 18px !important;
+      left: 50% !important;
+      margin-left: -100px !important;
+      width: 200px !important;
+      border: 2px rgba(255, 255, 255, .38) solid !important;
+      border-radius: 4px !important;
+    }
+
+    .en-markup-crop-options div div:first-of-type {
+      margin-left: 0px !important;
+    }
+  </style>
+</head> -->
+
 <!-- head 结束 -->
 
 
 <body class="page" itemscope="" itemtype="http://schema.org/WebPage">
+
   <div id="main" role="main" itemprop="mainContentOfPage">
     <div class="article-author-top">
       <img src="./source/zhou.jpg" width="180" height="180">
@@ -89,7 +127,7 @@
 
       <p style="text-indent:0;" size="3">
         <a href="http://kayzhou.github.io/pdf/resume.pdf" target="_blank">
-          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> CV</a>
+          <i class="glyphicon glyphicon-paperclip" aria-hidden=""></i> Curriculum Vitae</a>
       </p>
 
       <p style="text-indent:0;" size="3">
@@ -104,10 +142,6 @@
 
       <font size="3">Links:</font>
       <p style="text-indent:0;" size="3">
-          <a href="http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/" target="_blank">
-            <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Hernan Makse's Lab</a>
-      </p>
-      <p style="text-indent:0;" size="3">
         <a href="http://zhaojichang.cn" target="_blank">
           <i class="glyphicon glyphicon-tree-deciduous" aria-hidden=""></i> Jichang Zhao's Group</a>
       </p>
@@ -117,6 +151,8 @@
       <!-- <a href="http://kayzhou.github.io/pdf/CV_Zhenkun.pdf" target="_blank"><font color='red'>→ Download my CV*. </font></a> -->
 
     </div>
+
+    <!-- 关于我 -->
     <article itemscope="" itemtype="http://schema.org/CreativeWork">
 
       <div id="about_me" class="article-wrap" itemprop="text">
@@ -397,12 +433,19 @@
       <!-- </div> -->
 
     </article>
+
+
   </div>
   <!-- /#index -->
 
   <script src="./source/jquery.min.js"></script>
+  <!-- <script>
+      window.jQuery || document.write(
+        '<script src="http://jasonansel.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script> -->
   <script src="./source/main.min.js"></script>
 
 
 </body>
+
 </html>
