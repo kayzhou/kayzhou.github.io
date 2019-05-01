@@ -2948,19 +2948,19 @@ screen and (max-height:300px) {
     #main article {
         display: inline;
         float: left;
-        width: 50%;
+        width: 37.5%;
     }
 
     #index {
         display: inline;
         float: left;
-        width: 50%;
+        width: 37.5%;
     }
 
     .related-articles {
         display: inline;
         float: left;
-        width: 50%;
+        width: 37.5%;
         margin-left: 33.333333333333336%;
         margin-right: 29.166666666666668%;
     }
@@ -2968,7 +2968,7 @@ screen and (max-height:300px) {
     .footer-wrap footer {
         display: inline;
         float: left;
-        width: 50%;
+        width: 37.5%;
         margin-left: 33.333333333333336%;
         margin-right: 29.166666666666668%;
     }
@@ -2976,7 +2976,7 @@ screen and (max-height:300px) {
     .article-author-top {
         display: inline;
         float: left;
-        width: 50%;
+        width: 15%;
         margin-left: 20%;
     }
 }
