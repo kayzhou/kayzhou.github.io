@@ -402,7 +402,8 @@ h6 {
 }
 
 p {
-    margin: 0 0 1.5em;
+    text-indent: 1.5em;
+    margin: 0 0 2em;
 }
 
 p+p {
@@ -582,7 +583,7 @@ h6 {
 
 a {
     text-decoration: none;
-    color: #343434;
+    font-style: italic;
 }
 
 a:visited {
@@ -2995,8 +2996,6 @@ screen and (max-height:300px) {
     font-size: 15px
 }
 
-.plink a {}
-
 .ptitle {
     padding: 3px;
     margin: 3px;
@@ -3012,7 +3011,6 @@ screen and (max-height:300px) {
 
 .pvenue {
     display: inline-block;
-    color: #500;
     margin: 5px;
     font-size: 15px
 }
