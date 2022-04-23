@@ -2867,9 +2867,9 @@ screen and (max-height:300px) {
         display: block;
         display: inline;
         float: left;
-        width: 20%;
+        width: 15%;
         margin-left: 2.0%;
-        margin-right: 4.0%;
+        margin-right: 2.0%;
     }
 
     .article-author-bottom {
