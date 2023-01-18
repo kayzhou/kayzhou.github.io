@@ -2842,7 +2842,7 @@ screen and (max-height:300px) {
     #main article {
         display: inline;
         float: left;
-        width: 50%;
+        width: 66%;
         margin-left: 0%;
         margin-right: 0%;
     }
@@ -2867,7 +2867,7 @@ screen and (max-height:300px) {
         display: block;
         display: inline;
         float: left;
-        width: 15%;
+        width: 20%;
         margin-left: 2.0%;
         margin-right: 2.0%;
     }
