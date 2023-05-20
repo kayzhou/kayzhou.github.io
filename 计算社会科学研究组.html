@@ -1,5 +1,5 @@
 <!doctype html>
-<html style='font-size:14px !important'>
+<html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
@@ -205,1269 +205,643 @@ mark .md-meta { color: rgb(0, 0, 0); }
 mjx-container { break-inside: avoid; }
 
 
-/* you can override the default max-width size here or override each style by your custom css */
+/* 
+ *   Typora Theme - Lapis  /  Author - YiNN 
+ *   https://github.com/YiNNx/typora-theme-lapis
+ */
+
+ :root {
+  --text-color: rgb(58 64 73 / 97%);
+  --primary-color: #4870ac;
+  --block-background-color: #f6f8fa;
+  --marker-color: #a2b6d4;
+  --control-text-hover-color: #a2b6d4;
+}
+
+/*
+ * Font-face for Cantarell, Source Han Serif CN and JetBrains Mono
+ */
+
+/*
+ * Basic Style
+ */
 
 #write {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-    max-width: 80rem;
+    max-width: 950px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    word-break: break-word;
+    word-wrap: break-word;
+    text-align: justify;
+    
+    /* font-family: 'Cantarell','Source Han Serif CN','JetBrains Mono'; */
+    font-family: 'Cantarell','SourceHanSerifCN','JetBrainsMono';
+    margin-bottom: 20rem;
 }
 
-p {
-    line-height: 2rem;
-}
-
-pre,
-code,
-kbd,
-tt,
-var {
-    font-size: 0.875em;
-}
-@import "";
-@import "";
-
-/* FONTS */
-
-/* VARIABLES */
-
-:root {
-  --theme-0: #fff;
-
-  /* Slate grayscale */
-  --theme-50: #f8fafc;
-  --theme-100: #f1f5f9;
-  --theme-200: #e2e8f0;
-  --theme-300: #cbd5e1;
-  --theme-400: #94a3b8;
-  --theme-500: #64748b;
-  --theme-600: #475569;
-  --theme-700: #334155;
-  --theme-800: #1e293b;
-  --theme-900: #0f172a;
-
-  /* Tailwind variables */
-  --tw-primary: #62bbf3;
-
-  --tw-prose-body: var(--theme-700);
-  --tw-prose-headings: var(--theme-900);
-  --tw-prose-lead: var(--theme-600);
-  --tw-prose-links: var(--theme-900);
-  --tw-prose-bold: var(--theme-900);
-  --tw-prose-counters: var(--theme-500);
-  --tw-prose-bullets: var(--theme-300);
-  --tw-prose-hr: var(--theme-200);
-  --tw-prose-quotes: var(--theme-900);
-  --tw-prose-quote-borders: var(--theme-200);
-  --tw-prose-captions: var(--theme-500);
-  --tw-prose-code: var(--theme-900);
-  --tw-prose-pre-code: var(--theme-100);
-  --tw-prose-pre-bg: var(--theme-800);
-  --tw-prose-th-borders: var(--theme-300);
-  --tw-prose-td-borders: var(--theme-200);
-  --tw-prose-bg: var(--theme-0);
-  --tw-prose-meta: var(--theme-500);
-  --tw-prose-meta-bg: var(--theme-100);
-
-  --tw-prose-invert-body: var(--theme-300);
-  --tw-prose-invert-headings: var(--theme-0);
-  --tw-prose-invert-lead: var(--theme-400);
-  --tw-prose-invert-links: var(--theme-0);
-  --tw-prose-invert-bold: var(--theme-0);
-  --tw-prose-invert-counters: var(--theme-400);
-  --tw-prose-invert-bullets: var(--theme-600);
-  --tw-prose-invert-hr: var(--theme-700);
-  --tw-prose-invert-quotes: var(--theme-100);
-  --tw-prose-invert-quote-borders: var(--theme-700);
-  --tw-prose-invert-captions: var(--theme-400);
-  --tw-prose-invert-code: var(--theme-0);
-  --tw-prose-invert-pre-bg: var(--theme-900);
-  --tw-prose-invert-th-borders: var(--theme-600);
-  --tw-prose-invert-td-borders: var(--theme-700);
-  --tw-prose-invert-bg: var(--theme-800);
-  --tw-prose-invert-meta: var(--theme-400);
-  --tw-prose-invert-meta-bg: var(--theme-700);
-
-  --tw-highlight-color: #fde047; /* yellow-300 */
-  --tw-drop-shadow-md: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
-    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  --tw-button-hover-bg: var(--theme-100);
-
-  --tw-button-hover-bg-inverted: var(--theme-700);
-
-  /* Typora variables */
-
-  --background: var(--tw-prose-bg);
-  --bg-color: var(--tw-prose-bg);
-  --text-color: var(--tw-prose-body);
-  --primary-color: var(--tw-primary);
-  --md-char-color: var(--theme-400);
-  --meta-content-color: var(--theme-500);
-  --typora-source-body: var(--theme-800);
-  --heading-char-color: var(--md-char-color);
-  --mermaid-theme: neutral;
-  --active-toggle-btn-color: var(--theme-200);
-
-  --md-char-color-inverted: var(--theme-500);
-  --meta-content-color-inverted: var(--theme-400);
-  --typora-source-body-inverted: var(--theme-300);
-  --mermaid-theme-inverted: dark;
-  --active-toggle-btn-color-inverted: var(--theme-400);
-
-  /* Sidebar */
-  --side-bar-bg-color: var(--tw-prose-bg);
-  --active-file-bg-color: var(--theme-100);
-  --active-file-text-color: var(--tw-prose-bold);
-  --active-file-border-color: var(--theme-100);
-  --panel-border-color: var(--theme-300);
-  --blur-text-color: var(--theme-300);
-  --window-border: 1px solid var(--theme-200);
-  --item-hover-bg-color: var(--theme-100);
-  --search-hit-text-bg-color: var(--theme-200);
-  --search-hit-text-font-color: inherit;
-  --search-select-text-color: var(--select-text-font-color);
-  --search-select-bg-color: var(--select-text-bg-color);
-
-  --blur-text-color-inverted: var(--theme-500);
-  --panel-border-color-inverted: var(--theme-700);
-  --active-file-bg-color-inverted: var(--theme-700);
-  --window-border-inverted: 1px solid var(--theme-700);
-  --search-hit-text-bg-color-inverted: var(--theme-700);
-  --search-hit-text-font-color-inverted: var(--theme-0);
-  --search-select-bg-color-inverted: var(--theme-400);
-  --rawblock-edit-panel-bd: var(--tw-prose-pre-bg);
-  --item-hover-bg-color-inverted: var(--theme-700);
-
-  --monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-
-  /* Custom */
-  --footnote: var(--tw-prose-body);
-  /* I'd love to use the --theme grayscale for --footnote-bg, but there's (currently)
-  no way to add an alpha-channel to a CSS variable (and we need the transparency
-  because otherwise the caret wil not be visible), so I here just used a hardcoded
-  copy of --theme-500 */
-  --footnote-bg: #94a3b855;
-  --button-bg: var(--theme-200);
-
-  --button-bg-inverted: var(--theme-600);
-
-  --md-grid-header: var(--theme-100);
-  --md-grid-header-ext: var(--theme-400);
-  --md-grid-ext: var(--theme-300);
-  --md-grid-header-active: var(--theme-500);
-  --md-grid-active: var(--theme-400);
-  --md-grid-border-color: var(--theme-500);
-
-  --md-grid-header-inverted: var(--theme-600);
-  --md-grid-header-ext-inverted: var(--theme-500);
-  --md-grid-ext-inverted: var(--theme-600);
-  --md-grid-header-active-inverted: var(--theme-400);
-  --md-grid-active-inverted: var(--theme-500);
-  --md-grid-border-color-inverted: var(--theme-200);
-
-  --code-blocks-font-size: 0.9em;
-  --inline-code-font-size: 0.9em;
-}
-
-.ty-file-search-match-text {
-  background-color: var(--search-hit-text-bg-color);
-}
-
-/* TAILWIND RESET */
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: currentColor;
-  /* 2 */
-}
-
-::before,
-::after {
-  --tw-content: "";
-}
-
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-*/
-
-#text {
-  line-height: 1.5;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -moz-tab-size: 4;
-  /* 3 */
-  -o-tab-size: 4;
-  tab-size: 4;
-  /* 3 */
-}
-
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
-
-#text {
-  margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
-}
-
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
-
-hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
-}
-
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-
-abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
-}
-
-/*
-Remove the default font size and weight for headings.
-*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: "LXGWWenKai-Blod";
-}
-
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-/*
-Add the correct font weight in Edge and Safari.
-*/
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
-*/
-
-code,
-kbd,
-samp,
-pre {
-  font-family: var(--monospace);
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/*
-Add the correct font size in all browsers.
-*/
-
-small {
-  font-size: 80%;
-}
-
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
-
-table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
-}
-
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: inherit;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  padding: 0;
-  /* 3 */
-}
-
-/*
-Removes the default spacing and border for appropriate elements.
-*/
-
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
-
-textarea {
-  resize: vertical;
-}
-
-/* TAILWIND PROSE IMPLEMENTATION */
-
-#write {
-  font-size: 1.25rem;
-  line-height: 1.625rem;
-  max-width: 80rem;
-}
-
-html,
-body {
-  font-family: "LXGWWenKai-Regular";
-}
-
-/* on Windows/Linux, it is the part that is not titlebar or status bar. */
-content,
-titlebar {
-  background: var(--tw-prose-bg);
-}
-
-#write {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  color: var(--tw-prose-body);
-  max-width: 60ch;
-}
-
-#write > :where(:first-child) {
-  margin-top: 0;
-}
-
-#write > :where(:last-child) {
-  margin-bottom: 0;
-}
-
-/**
-  * ---------------------
-  * Block Elements
-  */
-
-/* yaml */
-pre.md-meta-block {
-  color: var(--tw-prose-meta);
-  background-color: var(--tw-prose-meta-bg);
-  font-weight: 400;
-  font-size: var(--code-blocks-font-size);
-  line-height: 1.7777778;
-  border-radius: 0.5rem /* 8px */;
-  padding: 1.1111111em 1.3333333em;
-  margin-bottom: 2.8em;
-}
-
-/* headings */
-h1 {
-  color: var(--tw-prose-headings);
-  font-weight: 800;
-  font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  line-height: 2.75rem;
-  letter-spacing: -1.5px;
-}
-
-h1 strong {
-  font-weight: 900;
-}
-
-h2 {
-  color: var(--tw-prose-headings);
-  font-weight: bold;
-  font-size: 1.63rem;
-  margin-top: 1.5555556em;
-  margin-bottom: 1.5rem;
-  line-height: 1.875rem;
-  letter-spacing: -1px;
-}
-
-h2 strong {
-  font-weight: 800;
-}
-
-h3 {
-  color: var(--tw-prose-headings);
-  font-weight: bold;
-  font-size: 1.17rem;
-  margin-top: 1.6em;
-  margin-bottom: 1.5rem;
-  line-height: 1.5rem;
-  letter-spacing: -1px;
-}
-
-h3 strong {
-  font-weight: 700;
-}
-
-h4 {
-  color: var(--tw-prose-headings);
-  font-size: 1.12rem;
-  font-weight: 600;
-  margin-top: 1.8em;
-  margin-bottom: 1.5rem;
-  line-height: 1.375rem;
-}
-
-h4 strong {
-  font-weight: 700;
-}
-
-h2 code {
-  font-size: 0.8611111em;
-}
-
-h3 code {
-  font-size: 0.9em;
-}
-
-h2 + * {
-  margin-top: 0;
-}
-
-h3 + * {
-  margin-top: 0;
-}
-
-h4 + * {
-  margin-top: 0;
-}
-
-h5 {
-  font-size: 0.97rem;
-  line-height: 1.25rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-}
-
-h6 {
-  font-size: 0.93rem;
-  line-height: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-/* table */
-
-table {
-  width: 100%;
-  table-layout: auto;
-  text-align: left;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  font-size: 0.9em;
-  line-height: 1.5555556;
-}
-
-/* table header */
-
-thead {
-  border-bottom-width: 1px;
-  border-bottom-color: var(--tw-prose-th-borders);
-}
-
-thead th {
-  color: var(--tw-prose-headings);
-  font-weight: 600;
-  vertical-align: bottom;
-  padding-right: 0.6666667em;
-  padding-bottom: 0.8888889em;
-  padding-left: 0.6666667em;
-}
-
-thead th:first-child {
-  padding-left: 0;
-}
-
-thead th:last-child {
-  padding-right: 0;
-}
-
-tbody tr {
-  border-bottom-width: 1px;
-  border-bottom-color: var(--tw-prose-td-borders);
-}
-
-tbody tr:last-child {
-  border-bottom-width: 0;
-}
-
-tbody td {
-  vertical-align: baseline;
-  padding-top: 0.8888889em;
-  padding-right: 0.6666667em;
-  padding-bottom: 0.8888889em;
-  padding-left: 0.6666667em;
-}
-
-tbody td:first-child {
-  padding-left: 0;
-}
-
-tbody td:last-child {
-  padding-right: 0;
-}
-
-.md-grid-board tr[row="1"] {
-  background-color: var(--md-grid-header);
-}
-
-.md-grid-board a:hover,
-.md-grid-board a.md-active {
-  background: var(--md-grid-active);
-}
-
-.md-grid-board tr[row="1"] a:hover,
-.md-grid-board tr[row="1"] a.md-active {
-  background: var(--md-grid-header-active);
-}
-
-.md-grid-board .md-grid-ext {
-  background: var(--md-grid-ext);
-}
+/* Strong */
 
-.md-grid-board tr[row="1"] .md-grid-ext {
-  background: var(--md-grid-header-ext);
+#write strong {
+  color:var(--primary-color);
 }
 
-.md-grid-board a {
-  border-color: var(--md-grid-border-color) !important;
-}
-
-/* lists */
-
-ol {
-  list-style-type: decimal;
-  padding-left: 2.6em;
-}
-
-li {
-  margin-top: 0.6em;
-  margin-bottom: 0.6em;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 2.6em;
-}
-
-#write ul.task-list {
-  padding-left: 0;
-}
-
-#write li.task-list-item {
-  padding-left: 0.4em;
-}
-
-#write input[type="checkbox"] {
-  margin-left: -1em;
-}
-
-input[checked] ~ * {
-  opacity: 0.7;
-  text-decoration: line-through;
-}
-
-ol > li::marker {
-  font-weight: 400;
-  color: var(--tw-prose-counters);
-}
-
-ul > li::marker {
-  color: var(--tw-prose-bullets);
-}
-
-ul > li,
-ol > li {
-  padding-left: 0.4em;
-}
-
-ul > li p,
-ol > li p {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-
-#write > ul > li > :not(input):first-child,
-#write > ol > li > :not(input):first-child,
-#write > ul > li > input + *,
-#write > ol > li > input + * {
-  margin-top: 1.2em;
-}
-
-#write > ul > li > *:last-child,
-#write > ol > li > *:last-child {
-  margin-bottom: 1.2em;
-}
-
-#write ul > li > p:only-child,
-#write ol > li > p:only-child,
-#write ul > li > input + p:last-child,
-#write ol > li > input + p:last-child {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul ul,
-ul ol,
-ol ul,
-ol ol {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-
-/* blockquote */
-blockquote {
-  font-weight: 500;
-  font-style: italic;
-  color: var(--tw-prose-quotes);
-  border-left-width: 0.25rem;
-  border-left-color: var(--tw-prose-quote-borders);
-  quotes: "\201C""\201D""\2018""\2019";
-  margin-top: 1.6em;
-  margin-bottom: 1.6em;
-  padding-left: 1.0666667em;
-}
-
-blockquote p:first-of-type::before {
-  content: open-quote;
-}
-
-blockquote p:last-of-type::after {
-  content: close-quote;
-}
-
-/* hr */
-hr {
-  border-color: var(--tw-prose-hr);
-  border-top-width: 1px;
-}
-
-[mdtype="hr"] {
-  margin-top: 2.8em;
-  margin-bottom: 2.8em;
-}
-
-p {
-  margin-top: 1.2em;
-  margin-bottom: 1.2em;
-}
-
-.in-text-selection,::selection {
-  background-color: var(--select-text-bg-color);
-}
-
-/* diagram panel */
-.md-diagram-panel {
-  color: var(--tw-prose-body);
-}
-
-.enable-diagrams .md-diagram .code-tooltip {
-  bottom: -1.9em;
-  right: 0;
-}
-
-.md-fences-adv-panel {
-  margin-top: 1.3em;
-}
-
-/* footnote definition */
-sup.md-footnote {
-  color: var(--footnote);
-  background-color: var(--footnote-bg);
-}
+/* Link */
 
-.footnotes {
-  font-size: 0.85em;
+#write a  {
+  color: var(--primary-color);
 }
 
-.md-reverse-footnote-area a {
-  font-family: "LXGWWenKai-Regular";
+#write .md-p a,
+#write .md-heading a {
   text-decoration: none;
-  color: var(--tw-primary);
-  border-radius: 3px;
+  word-wrap: break-word;
+  border-bottom: 1px solid var(--primary-color);
+  margin: 2px;
 }
 
-.md-hover-tip .code-tooltip-content {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  padding: 0.8em 1.2em;
+[md-inline=url], [md-inline=link]>.md-content, [md-inline=image]>.md-meta {
+  word-break: break-all;
+  font-weight: normal;
+  font-family: 'JetBrainsMono';
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  color: #a2b6d4;
 }
 
-.md-reverse-footnote-area a:hover {
-  background-color: var(--item-hover-bg-color);
+/* 
+ * TOC
+ */
+
+.md-toc-content {
+  font-family: 'SourceHanSerifCN';
 }
 
-.md-def-name:before {
-  color: var(--md-char-color);
-}
-
-.md-rawblock.md-rawblock-on-edit,
-.md-rawblock:hover {
-  color: var(--tw-prose-pre-code);
-}
-
-.md-inline-math script {
-  color: var(--tw-prose-code);
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: var(--tw-highlight-color) !important;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: #000 !important;
-  stroke: #000 !important;
-}
-
-.code-tooltip {
-  color: var(--tw-prose-pre-code);
-}
-
-.code-tooltip .md-mathjax-preview {
-  color: var(--tw-prose-body);
-}
-
-.md-htmlblock-container,
-.md-rawblock-input.md-rawblock-control,
-.md-htmlblock-panel.md-rawblock-control,
-.md-math-container {
-  border-radius: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.md-rawblock-input {
-  font-size: var(--code-blocks-font-size);
-  padding: 0 1.3333333em;
-}
-
-.md-mathblock-panel .md-rawblock-input.md-rawblock-control {
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 0;
-}
-
-.md-mathblock-panel .md-rawblock-before {
-  padding-top: 1.1em;
-  border-top-left-radius: 0.5rem;
-}
-
-.md-mathblock-panel .md-rawblock-after {
-  padding-bottom: 1.1em;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-
-.md-htmlblock-panel .md-rawblock-input {
-  padding-top: 1.1111111em;
-  padding-bottom: 1.1111111em;
-}
-
-.md-mathblock-panel .md-rawblock-before,
-.md-mathblock-panel .md-rawblock-after {
-  font-size: var(--code-blocks-font-size);
-  padding-left: calc(4px + 1.3333333em);
-  color: var(--code-bracket);
-}
-
-.md-rawblock-tooltip {
-  color: var(--tw-prose-pre-code);
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.md-rawblock-tooltip-name {
-  opacity: 1;
-}
-
-.md-comment {
-  font-size: var(--inline-code-font-size);
-  color: var(--code-comment);
-}
-
-.md-raw-inline,
-.md-tag,
-[md-inline="linebreak"],
-.md-image > .md-meta,
-.md-inline-math.md-expand > .md-inline-math-container {
-  font-size: var(--code-blocks-font-size);
-}
-
-/**
-  * Code Fences
-  * see http://support.typora.io/Code-Block-Styles
-  */
-
-.md-fences {
-  color: var(--tw-prose-pre-code);
-  background-color: var(--tw-prose-pre-bg);
-  font-weight: 400;
-  font-size: var(--code-blocks-font-size);
-  line-height: 1.7777778;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  border-radius: 0.5rem /* 8px */;
-  padding: 1.1111111em 1.3333333em;
-}
-
-.md-fences.md-focus {
-  border-bottom-right-radius: 0;
-}
-
-.md-fences > .code-tooltip {
-  height: 1.8rem;
-  bottom: -1.8rem;
-  font-size: 0.9rem;
-  border-radius: 0 0 0.5rem 0.5rem;
-}
-
-.code-tooltip .ty-input {
-  min-width: 10rem;
-}
-
-pre code {
-  background-color: transparent;
-  border-width: 0;
-  border-radius: 0;
-  padding: 0;
-  font-weight: inherit;
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-  line-height: inherit;
-}
-
-pre code::before {
-  content: none;
-}
-
-pre code::after {
-  content: none;
-}
-
-/* SYNTAX HIGHLIGHTING */
-
-:root {
-  --code-neutral: var(--theme-800);
-  --code-cursor: var(--theme-900);
-  --code-string: rgb(14, 165, 233); /* sky-500 */
-  --code-number: rgb(245, 158, 11); /* amber-500 */
-  --code-tag: rgb(236, 72, 153); /* pink-500 */
-  --code-color: rgb(237, 71, 89);
-  --code-color-bg: rgb(237, 237, 235);
-  --code-variable: var(--theme-700);
-  --code-operator: var(--theme-600);
-  --code-comment: var(--theme-500);
-  --code-bracket: var(--theme-500);
-  --code-citation: var(--theme-500);
-
-  --code-neutral-inverted: var(--theme-100);
-  --code-cursor-inverted: var(--theme-50);
-  --code-string-inverted: #7dd4fc; /* sky-300 */
-  --code-number-inverted: #fde68a; /* amber-100 */
-  --code-tag-inverted: #f472b5; /* pink-400 */
-  --code-variable-inverted: var(--theme-200);
-  --code-operator-inverted: var(--theme-400);
-  --code-comment-inverted: var(--theme-400);
-  --code-bracket-inverted: var(--theme-500);
-  --code-citation-inverted: var(--theme-400);
-}
-
-#write .cm-s-inner {
-  --code-neutral: var(--code-neutral-inverted);
-  --code-cursor: var(--code-cursor-inverted);
-  --code-string: var(--code-string-inverted);
-  --code-number: var(--code-number-inverted);
-  --code-tag: var(--code-tag-inverted);
-  --code-variable: var(--code-variable-inverted);
-  --code-operator: var(--code-operator-inverted);
-  --code-comment: var(--code-comment-inverted);
-  --code-bracket: var(--code-bracket-inverted);
-  --code-citation: var(--code-citation-inverted);
-}
-
-.CodeMirror-selectedtext {
-  background-color: transparent;
-}
-.CodeMirror-cursor {
-  border-left: 1px solid var(--code-cursor) !important;
-}
-.CodeMirror-gutters {
-  border-color: var(--code-comment);
-}
-.cm-s-inner span.cm-string {
-  color: var(--code-string);
-}
-
-.cm-s-inner span.cm-number {
-  color: var(--code-number);
-}
-
-.cm-s-inner span.cm-tag,
-.cm-s-inner span.cm-keyword,
-.cm-s-inner span.cm-qualifier {
-  color: var(--code-tag);
-}
-
-.cm-s-inner .CodeMirror-guttermarker,
-.cm-s-inner .CodeMirror-guttermarker-subtle,
-.cm-s-inner span.cm-comment.cm-def,
-.cm-s-inner span.cm-comment.cm-type,
-.cm-s-inner span.cm-builtin,
-.cm-s-inner span.cm-type,
-.cm-s-inner span.cm-header,
-.cm-s-inner span.cm-link,
-.cm-s-inner span.cm-error {
-  background: transparent;
-  color: var(--code-neutral);
-}
-
-.cm-s-inner span.cm-attribute,
-.cm-s-inner span.cm-property,
-.cm-s-inner span.cm-variable,
-.cm-s-inner span.cm-variable-2,
-.cm-s-inner span.cm-variable-3,
-.cm-s-inner span.cm-type,
-.cm-s-inner span.cm-atom,
-.cm-s-inner span.cm-def {
-  color: var(--code-variable);
-}
-.cm-s-inner span.cm-comment,
-.cm-s-inner .CodeMirror-linenumber {
-  color: var(--code-comment);
-}
-.cm-s-inner span.cm-operator {
-  color: var(--code-operator);
-}
-.cm-s-inner span.cm-bracket,
-.cm-s-inner span.cm-tag.cm-bracket,
-.cm-s-inner span.cm-meta {
-  color: var(--code-bracket);
-}
-
-.cm-s-inner span.cm-link {
-  text-decoration: underline;
-}
-
-/**
-  * Inline Elements
-  */
-
-/* basic styles */
-
-code {
-  color: var(--code-color);
-  background-color: var(--code-color-bg);
-  border-radius: 0.3rem;
-  padding: 0.1rem 0.3rem;
-  margin: 0.1rem 0.1rem;
-}
-
-code::before {
-  content: none;
-}
-
-code::after {
-  content: none;
-}
-
-[md-inline="code"].md-expand > code::before,
-[md-inline="code"].md-expand > code::after {
-  content: "";
-}
-
-a code {
-  color: var(--tw-prose-links);
-}
-
-mark code {
-  color: inherit;
-}
-
-strong {
-  color: var(--tw-prose-bold);
-  font-weight: 600;
-}
-
-a {
-  color: var(--tw-prose-links);
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-/* A block-level image should have a total top and bottom margin of 2em.
-It is always wrapped in a paragraph with 1.2em vertical margin, hence we
-add 0.8 here */
-p > .md-image:only-child {
-  margin-top: 0.8em !important;
-  margin-bottom: 0.8em !important;
-}
-
-.md-image > .md-meta {
-  color: var(--tw-prose-code);
-}
-
-/* extend styles */
+/* mark */
 
 mark {
+  background: #ffffb5;
+  padding: 1px .15rem;
+  border-radius: 1px;
+  color: inherit;
+}
+
+/* 
+ * Paragraph
+ */
+
+#write + p, 
+#write blockquote p {
+  font-size: 1.1rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  margin: 0;
+  line-height: 1.8rem;
+  color: var(--text-color);
+}
+
+#write div[mdtype=toc] {
+  font-size: 1.1rem;
+}
+
+
+
+/*
+ * Header
+ */
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: 'SourceHanSerifCN';
+  padding: 0px;
+  color: var(--primary-color);
+}
+
+#write h1 {
+  text-align: center;
+}
+
+#write h2 span.md-plain {
+  background: var(--primary-color);
+  padding: 1px 15px 2px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#write h2 span.md-link {
+ background: var(--primary-color);
+ padding: 1px 11px 6px;
+ border-radius: 4px;
+}
+
+#write h2 span.md-link .md-plain {
+  background: #ffffff00;
+  padding: 1px 0px 3px;
+}
+
+#write h2 span.md-content {
+ color: #ffffff;
+}
+
+#write h2.md-heading a {
+  border-bottom: 1px solid white;
+}
+
+@media print{
+  #write h2 span {
+     display: inline-block;
+     font-weight: bold;
+     background: var(--primary-color);
+     color: #ffffff;
+     padding: 1px 15px 1px;
+     border-radius: 4px;
+     margin-right: 3px;
+    }
+}
+
+#write h1 { font-size: 2rem; }
+#write h2 { font-size: 1.5rem; }
+#write h3 { font-size: 1.4rem; }
+#write h4 { font-size: 1.2rem; }
+#write h5 { font-size: 1.1rem; }
+#write h6 { font-size: 1.1rem; }
+
+#write h1 {
+  padding-top: 0.9rem;
+  margin-bottom: 2.3rem;
+}
+
+#write h2 {
+  margin: 1.2em 0 1.2em;
+}
+
+#write h3 { margin: 1em 0 1em; }
+#write h4 { margin: 0.8em 0 0.8em; }
+#write h5 { margin: 0.6em 0 0.6em; }
+#write h6 { margin: 0.4em 0 0.4em; }
+
+/*
+ * List
+ */
+
+::marker {
+  font-weight: bold;
+  color: var(--marker-color);
+}
+
+li.md-list-item {
+  margin: 0.4rem 0;
+}
+
+#write ul,
+#write ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+
+#write ul {
+  list-style-type: disc;
+}
+
+#write em {
+  padding: 0 3px 0 0;
+}
+
+#write ul ul {
+  list-style-type: square;
+}
+
+#write ol {
+  list-style-type: decimal;
+}
+
+#write li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.7rem;
+  text-align: justify;
+  color: var(--text-color); 
+  font-weight: 500;
+}
+
+/*
+ * Quote
+ */
+#write blockquote {
+  display: block;
+  font-size: .9em;
+  overflow: auto;
+  border-left: 3px solid var(--primary-color);
+  padding: 15px 30px 15px 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: var(--block-background-color);
+}
+
+/*
+ * Inline code
+ */
+
+#write code {
+  color: var(--primary-color);
+  font-size: 94%;
+  font-weight: normal;
+  word-wrap: break-word;
+  padding: 2px 4px 2px;
   border-radius: 3px;
-  padding: 0 2px;
-  background-color: var(--tw-highlight-color);
+  margin: 2px;
+  background-color:  var(--block-background-color);
+  font-family: 'JetBrainsMono';
+  word-break: break-all;
 }
 
-/**
-  * Source Code Mode
-  * see http://support.typora.io/Code-Block-Styles
-  */
-
-.cm-s-typora-default .CodeMirror-activeline-background {
-  background-color: var(--item-hover-bg-color);
+/*
+ * Img
+ */
+#write img {
+  margin: 0 auto;
+  max-width: 100%;
 }
 
-#typora-source {
-  font-family: var(--monospace);
-  color: var(--typora-source-body);
+#write span img {
+  filter: drop-shadow(#d2dff4 0px 0px 8px);
+  border-radius: 3rem;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-#typora-source .cm-header {
-  color: var(--code-tag);
+/*
+ * Table
+ */
+#write table {
+  display: table;
+  text-align: justify;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  font-size: 1em;
+  margin: 0px 0px 20px;
+  width: 100%;
 }
 
-#typora-source .cm-link {
-  color: var(--code-string);
+#write tbody {
+  border: 0;
+}
+#write table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
 }
 
-#typora-source .cm-string {
-  color: var(--code-string);
+#write table tr th,
+#write table tr th, #write table tr td {
+  font-size: 1rem;
+  border: 1px solid #d9dfe4;
+  padding: 5px 10px;
+  text-align: justify;
+}
+#write table tr th {
+  text-align: center;
+  min-width: 10rem;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
-#typora-source .cm-comment {
-  color: var(--code-comment);
+table.md-table td {
+  min-width: 32px;
 }
 
-#typora-source .cm-atom {
-  color: var(--code-citation);
+/*
+ * Footnote Superscript
+ */
+#write .md-footnote {
+ font-weight: bold;
+}
+#write .md-footnote > .md-text:before {
+ content: '[';
+}
+#write .md-footnote > .md-text:after {
+ content: ']';
+
 }
 
-#typora-source .cm-tag {
-  color: var(--code-tag);
+/* Footnote */
+
+.footnotes {
+  opacity: 1;
+  font-size: 0.95rem;
 }
 
-#typora-source .cm-attribute {
-  color: var(--code-variable);
+#write .md-def-name {
+  padding-right: 1.8ch;
+}
+#write .md-def-name:before {
+  content: '[';
+  color: var(--text-color);
+}
+#write .md-def-name:after {
+  color: var(--text-color);
 }
 
-#typora-source .cm-bracket {
-  color: var(--code-bracket);
-}
-
-.file-list-item-file-ext-part {
-  opacity: 0.5;
-}
-
-#write div.md-toc-tooltip {
-  background-color: var(--tw-prose-bg);
-}
-
-.md-toc {
-  font-size: 0.8em;
-}
-
-.md-toc-h1 .md-toc-inner {
-  margin-left: 0;
-}
-
-.md-toc-h2 .md-toc-inner {
-  margin-left: 1em;
-}
-
-.md-toc-h3 .md-toc-inner {
-  margin-left: 2em;
-}
-
-.md-toc-h4 .md-toc-inner {
-  margin-left: 3em;
-}
-
-.md-toc-h5 .md-toc-inner {
-  margin-left: 4em;
-}
-
-.md-toc-h6 .md-toc-inner {
-  margin-left: 5em;
-}
-
-#typora-sidebar {
-  border-right: var(--window-border);
-}
-
-.sidebar-tab {
-  text-transform: none;
-  font-weight: 700;
-  font-size: 1.1em;
-}
-
-.md-search-hit {
-  color: var(--search-hit-text-font-color);
-  background-color: var(--search-hit-text-bg-color);
-}
-
-#md-searchpanel {
-  box-shadow: none;
-  filter: var(--tw-drop-shadow-md);
-}
-
-#md-searchpanel .btn:not(.close-btn):hover {
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  background-color: var(--tw-button-hover-bg);
-}
-
-#md-searchpanel input,
-#md-searchpanel .btn,
-#searchpanel-msg {
-  border-radius: 5px;
-}
-
-#searchpanel-msg {
-  color: var(--theme-500);
-  border-color: var(--theme-300);
-  background: var(--theme-100);
-}
-
-.form-control {
-  border-color: var(--panel-border-color);
-}
-
-.btn-default {
-  background-color: var(--button-bg);
-}
-
-
-/* you can override the default max-width size here or override each style by your custom css */
-
-#write {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-    max-width: 80rem;
-}
-
-p {
+span.md-plain {
     line-height: 2rem;
 }
 
-pre,
-code,
-kbd,
-tt,
-var {
-    font-size: 0.875em;
-} @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+p.md-end-block.md-p {
+    line-height: 2rem;
+    color: var(--text-color);
+    margin: 4px 0;
+}
+
+/* 
+ * Comment
+ */
+.md-comment {
+  color: #b4bad4;
+  opacity: 1;
+  font-family: 'JetBrainsMono';
+}
+
+/*
+ * Dividing line
+ */
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 2px solid #eef2f5;
+  border-radius: 2px;
+}
+
+/* Checkbox */
+
+#write input[type=checkbox] {
+  width: 0;
+}
+
+.task-list-item input::before {
+  content: "";
+  display: inline-block;
+  width: 1.0125rem;
+  height: 1.0125rem;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid var(--marker-color);
+  border-radius: 1.2rem;
+  background-color: #fdfdfd;
+  margin-left: -0.1rem;
+  margin-right: 0.1rem;
+  margin-top: -.6rem;
+}
+
+
+.task-list-item input:checked::before {
+  content: '✓';
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--primary-color);
+  color: var(--primary-color);
+  background-color: white;
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+}
+
+/*
+ * Sidebar
+ */
+#typora-sidebar {
+  font-family: 'Cantarell','Source Han Serif CN';
+  height: 100%;
+  color: #686d75;
+  font-size: 0.92rem;
+  background-color: white;
+}
+
+#sidebar-content.sidebar-content {
+  margin-top: .5rem;
+}
+
+/*
+ * Sidebar - FileNode
+ */
+
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+  border-radius:10px;
+  height: 1px;
+  background-color: var(--primary-color);
+}
+
+.file-node-content {
+   color: var(--primary-color); 
+   line-height: 1.6rem;
+  }
+
+span.file-node-title-name-part  { color: var(--text-color); }
+span.file-node-title-ext-part { color: var(--text-color); }
+.file-node-icon { padding-right: 0.2rem; }
+
+.file-tree-node.active>.file-node-background {
+  background-color: var(--block-background-color);
+  border-left: 4px solid var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/*
+ * Sidebar - Outline
+ */
+
+#outline-content {
+  height: 100%;
+  overflow-x: hidden;
+  line-height: 1.4rem;
+  font-size: .96rem;
+}
+
+.outline-item {
+  padding-left: 2em;
+}
+
+/* Meta Block */
+
+pre.md-meta-block {
+  font-family: 'JetBrainsMono';
+  color: var(--primary-color);
+  background: #f6f8fa;
+  padding: 1.5rem;
+  margin: -37px 0rem 3.8rem;
+  /* border-radius: 1rem; */
+  filter: drop-shadow(#d2dff4 0px 3px 3px);
+  /* border-top: 1px solid var(--primary-color); */
+  /* border-bottom: 1px solid var(--primary-color); */
+}
+
+/*
+ * Scrollbar
+ */
+
+#outline-content::-webkit-scrollbar { width: 0; }
+#file-library::-webkit-scrollbar { width: 0; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(179, 179, 179, 0.425);
+}
+
+::-webkit-scrollbar {
+  width :1rem;
+}
+
+/* 
+ * Code Block - Style
+ */
+
+.md-fences:before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+  margin-bottom: -7px;
+  border-radius: 5px;
+  background-position: 10px 10px;
+}
+
+.CodeMirror-wrap .CodeMirror-scroll {
+  overflow-x: auto;
+}
+.cm-s-inner.CodeMirror {
+  margin: 2rem 0;
+  padding: 1.2rem .8rem;
+  color: #4f5467;
+  font-family: 'JetBrainsMono';
+  border-radius: 10px;
+  background-color: var(--block-background-color);
+  /* border: 1px solid #eef2f5;*/
+  line-height: 1.6rem;
+}
+
+.CodeMirror-gutters {
+  border-right: 1px solid #a2b6d452;
+  background: inherit;
+  white-space: nowrap;
+}
+
+pre.CodeMirror-line {
+  padding: 0 1.2rem;
+}
+
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  text-align: right;
+  color: var(--primary-color);
+}
+
+/* 
+ * Code Block - Color Scheme
+ */
+
+.cm-s-inner .cm-keyword {
+  color: #1694b6 !important;
+}
+.cm-s-inner .cm-operator {
+  color: #2f86d2 !important;
+}
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-builtin,
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-tag,
+.cm-s-inner .cm-property,
+.cm-s-inner .cm-quote {
+  color: #b9218e !important;
+}
+
+.cm-s-inner .cm-variable-2 {
+  color: #7aadad !important;
+}
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type,
+.cm-s-inner .cm-atom {
+  color: #378ed8 !important;
+}
+
+.cm-s-inner .cm-number {
+  color: #1a5494 !important;
+}
+.cm-s-inner .cm-def,
+.cm-s-inner .cm-qualifier {
+  color: #0744ac !important;
+}
+.cm-s-inner .cm-string {
+  color: #6f42c2 !important;
+}
+.cm-s-inner .cm-string-2 {
+  color: #27638f !important;
+}
+.cm-s-inner .cm-comment {
+  color: #9a9a9a !important;
+}
+
+.cm-s-inner .cm-meta {
+  color: #0b93be !important;
+}
+.cm-s-inner .cm-attribute {
+  color: #8f6aa8 !important;
+}
+
+.cm-s-inner .cm-error {
+  color: rgba(255, 255, 255, 1) !important;
+  background-color: #b9218e40 !important;
+}
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid var(--primary-color);
+  z-index: 3;
+}
+
+.cm-s-inner div.CodeMirror-selected {
+  background: rgba(167, 178, 189, 0.2) !important;
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(167, 178, 189, 0.2) !important;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+  background-color: rgba(167, 178, 189, 0.0) !important;
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+  background-color: rgba(167, 178, 189, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::selection {
+  background-color: rgba(167, 178, 189, 0.2);
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
 </style><title>计算社会科学研究组</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
