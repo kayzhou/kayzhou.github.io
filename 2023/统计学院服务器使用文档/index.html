@@ -34,7 +34,7 @@ Zhenkun Zhou is an assistant professor in Capital University of Economics and Bu
 
 
 
-<title>Tags 标签 | Zhenkun Zhou</title>
+<title>统计学院服务器使用文档 | Zhenkun Zhou</title>
 
 
 
@@ -479,298 +479,320 @@ Zhenkun Zhou is an assistant professor in Capital University of Economics and Bu
   </div>
 </div>
   <main>
-    <!-- 
-This page has two versions, which is shown is based on whether current page
-is "tag".
+    <!-- css -->
 
-  - url:'http://localhost:4000/tag/' return false.
-- url:'http://localhost:4000/tags/test/' return true.
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
 
-The '/tag/' page shows all tags and is where you land on when you click
-on the "Tags" in the navigation bar. Otherwise if you enter 'tags' by clicking on of the tag elements in some
-posts, and it shows all posts with that tag.
+  
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
 
-To add a "Tags" page.
+    <!-- toc -->
+    
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-40 relative top-32 right-4 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
 
-1. hexo new page "tag"
-2. cd source/tag/index.md
-3. Add the following front matter.
 
----
-title: '''tag'''
-date: 2019-06-09 09:56:49
-layout: tag
----
--->
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- Post header before content -->
+  <header class="py-4">
+    <div class="flex flex-col gap-2 pt-4 md:pt-6">
+      <!-- Title -->
+      <div id="article-title" class="leading-snug">
+        <p class="text-3xl font-bold text-[var(--c-100)] mb-4">统计学院服务器使用文档</p>
+      </div>
+      <!-- Meta data -->
+      <div>
+        <section class="
+          flex flex-col gap-x-2 gap-y-1 text-sm text-[var(--c-100)]">
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <!-- Dates -->
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:add-circle-fill" ></iconify-icon>
+              Created: <time class="w-max">2023-10-25</time>
+            </div>
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:refresh-3-fill" ></iconify-icon>
+              Edited: <time class="w-max">2024-04-07</time>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-3">
+            <!-- Author -->
+            
 
-  <!-- 显示所有tag，让用户选择 -->
-  <div class="flex flex-col gap-2 px-6 max-w-prose mx-auto md:px-0 my-8">
-    <div class="flex flex-row items-center gap-2">
-      <iconify-icon width="28" icon="mingcute:tag-fill"></iconify-icon>
-      <h2 class="font-bold text-2xl">Tags</h2>
+            <!-- Word count -->
+            <span class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
+              <span>817 words, 3 min</span>
+            </span>
+            <!-- Categories -->
+            
+          </div>
+        </section>
+      </div>
+      <!-- tags -->
+      <div>
+        
+<div class="flex flex-wrap gap-1">
+  
+    
+      <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        研究生
+      </a>
+    
+      <a href="/tags/%E5%B7%A5%E5%85%B7/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        工具
+      </a>
+    
+  
+</div>
+      </div>
     </div>
-    <div class="tags-container flex flex-wrap gap-1 mt-2">
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto dark:prose-invert">
+    <h1 id="统计大数据实验室Linux服务器介绍"><a href="#统计大数据实验室Linux服务器介绍" class="headerlink" title="统计大数据实验室Linux服务器介绍"></a>统计大数据实验室Linux服务器介绍</h1><h2 id="Linux介绍"><a href="#Linux介绍" class="headerlink" title="Linux介绍"></a>Linux介绍</h2><p>Linux 是一种自由和开放源码的类 UNIX 操作系统。Linux 英文解释为 Linux is not Unix。Linux 是在 1991 由林纳斯（Linus）·托瓦兹在赫尔辛基大学上学时创立的，主要受到 Minix 和 Unix 思想的启发。目前服务器使用的是centos7开发版本。</p>
+<h3 id="Linux优势"><a href="#Linux优势" class="headerlink" title="Linux优势"></a>Linux优势</h3><ol>
+<li><p>开源（免费）</p>
+</li>
+<li><p>多用户、多任务、多线程</p>
+</li>
+</ol>
+<p>Linux系统同时可以支持多个用户，每个用户对自己的文件设备有特殊的权利，能够保证各用户之间互不干扰。</p>
+<ol start="3">
+<li>稳定性和高效性</li>
+</ol>
+<p>你也许会听到Windows服务器长时间运行而突然宕机，但你绝不会听到Linux系统服务器因为长时间不关机会卡死，在Linux上几乎是不会出现这种情况的Linux服务器可以无休止的运行下去不宕机，因为它继承了Unix卓越的稳定性和高效性。</p>
+<ol start="4">
+<li>安全性和SELinux</li>
+</ol>
+<p>学校为安全着想，机房对服务器有所限制，需内网访问，入口端口仅为22，出口有全校固定地址。</p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ol>
+<li>vscode（作为xshell的替代品）</li>
+</ol>
+<p>下载链接：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<ol start="2">
+<li>CyberDuck（作为xftp的替代品）</li>
+</ol>
+<p>下载链接：<a target="_blank" rel="noopener" href="https://cyberduck.io/download/">https://cyberduck.io/download/</a></p>
+<h2 id="基本使用方法"><a href="#基本使用方法" class="headerlink" title="基本使用方法"></a>基本使用方法</h2><ol>
+<li>vscode连接服务器（安装vscode插件 - Remote explorer）</li>
+</ol>
+<p>ssh username@ipaddr</p>
+<p>详细资料：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/code_nutter/article/details/126166928">https://blog.csdn.net/code_nutter/article/details/126166928</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1155404">https://developer.aliyun.com/article/1155404</a></p>
+<ol start="2">
+<li>通过终端命令与服务器进行交互</li>
+</ol>
+<p>菜单栏选择 Terminal &gt; New Terminal</p>
+<p>常用命令：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-command-manual.html">https://www.runoob.com/linux/linux-command-manual.html</a></p>
+<ol start="3">
+<li><p>推荐使用vscode直接对文件进行编辑，或是简单的创建、复制等。</p>
+</li>
+<li><p>通过vscode与服务器交互</p>
+<p> Python和Jupyter Notebook实际操作</p>
+</li>
+<li><p>使用vscode（拖拽）或CyberDuck（大文件）上传和下载文件</p>
+</li>
+</ol>
+<h2 id="Python及包的安装"><a href="#Python及包的安装" class="headerlink" title="Python及包的安装"></a>Python及包的安装</h2><ol>
+<li><p>从Anaconda官方网站下载适用于Linux的Anaconda安装包。您可以访问 <a target="_blank" rel="noopener" href="https://www.anaconda.com/products/distribution">https://www.anaconda.com/products/distribution</a> 下载最新版本的Anaconda，并使用Cyberduck上传到服务器，或者使用wget直接在服务器下载。</p>
+</li>
+<li><p>打开终端，并导航到您下载Anaconda安装包的目录。</p>
+</li>
+<li><p>运行以下命令以安装Anaconda：</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda3-2021.05-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
+
+<p>请注意，命令中的文件名可能会根据您下载的具体版本而有所不同。您需要根据您下载的文件名进行相应的更改。</p>
+<ol start="4">
+<li>按照安装向导中的提示进行操作。您可以选择默认安装路径或自定义安装路径。</li>
+<li>安装完成后，您需要初始化Anaconda。运行以下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>现在，您已经成功在Linux中安装了Anaconda。您可以通过运行以下命令来验证安装是否成功：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，您可以开始使用Anaconda来管理Python环境和安装各种数据科学工具和库。</p>
+<p><strong>提速方法</strong></p>
+<p>conda提速：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/</a><br>pip提速：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/</a></p>
+<p><strong>提示</strong></p>
+<p>R也可以通过conda进行安装和管理。</p>
+<h2 id="后台执行程序"><a href="#后台执行程序" class="headerlink" title="后台执行程序"></a>后台执行程序</h2><p>详细解读：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1737866720049869400&wfr=spider&for=pc">https://baijiahao.baidu.com/s?id=1737866720049869400&amp;wfr=spider&amp;for=pc</a></p>
+<p>推荐使用：</p>
+<ol>
+<li><p>nohup python *.py &gt; out.log 2&gt;&amp;1 &amp;</p>
+</li>
+<li><p>screen</p>
+</li>
+</ol>
+<p>周振坤于2023年10月25日更新</p>
+
+  </article>
+
+  <!-- prev and next -->
+  <div class="flex justify-between mt-4 pt-4
+    border-t border-[var(--c-sep)] text-sm
+    gap-2 text-[var(--c-50)]
+  ">
+    <div>
       
-      
-        <a href="/tags/%E6%9C%AC%E7%A7%91%E7%94%9F/"
+        <a href="/2024/group/"
           class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E6%9C%AC%E7%A7%91%E7%94%9F/">
-          #本科生
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×1
-          </span>
+            transition-all
+            flex justify-center
+            hover:-translate-x-1
+            hover:text-[var(--c-80)]
+          ">
+          <iconify-icon width="20" icon="mingcute:left-fill" data-inline="false">
+          </iconify-icon>
+          计算社会科学研究组（CSSG）
         </a>
       
-        <a href="/tags/%E6%95%99%E5%AD%A6/"
-          class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E6%95%99%E5%AD%A6/">
-          #教学
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×2
-          </span>
-        </a>
-      
-        <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"
-          class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">
-          #大数据
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×1
-          </span>
-        </a>
-      
-        <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"
-          class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
-          #研究生
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×2
-          </span>
-        </a>
-      
-        <a href="/tags/%E9%9D%9E%E7%BB%93%E6%9E%84/"
-          class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E9%9D%9E%E7%BB%93%E6%9E%84/">
-          #非结构
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×1
-          </span>
-        </a>
-      
-        <a href="/tags/%E7%A7%91%E7%A0%94/"
-          class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E7%A7%91%E7%A0%94/">
-          #科研
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×3
-          </span>
-        </a>
-      
-        <a href="/tags/%E7%BB%84%E4%BC%9A/"
-          class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E7%BB%84%E4%BC%9A/">
-          #组会
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×2
-          </span>
-        </a>
-      
-        <a href="/tags/%E5%B7%A5%E5%85%B7/"
-          class="
-            tag
-            flex flex-row items-center
-            text-[16px]
-            px-[8px]
-            py-[2px]
-            rounded-full
-            drop-shadow-md
-            border-[1px]
-            border-[var(--c-theme)]
-            text-[var(--c-theme)]
-            bg-[var(--c-0)]
-            dark:bg-[var(--c-0)]
-            dark:drop-shadow-none
-            hover:bg-[var(--c-theme)]
-            dark:hover:bg-[var(--c-theme)]
-            hover:text-[var(--c-0)]
-          "
-          href="/tags/%E5%B7%A5%E5%85%B7/">
-          #工具
-          <span class="
-            text-[var(--c-50)]
-            dark:text-[var(--c-70)]
-            hover:dark:text-[var(--c-80)]
-            hover:text-[var(--c-20)]
-            pl-1
-            text-sm">
-            ×2
-          </span>
-        </a>
+    </div>
+    <div>
       
     </div>
   </div>
 
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        var title = this.title;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        if (title) $(this).after('<span class="fancybox-title">' + title + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
 
   </main>
   <footer class="flex flex-col mt-18 mb-12 items-center
