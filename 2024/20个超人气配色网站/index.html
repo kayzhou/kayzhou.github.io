@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en,zh-CN,default">
+<head>
+  <meta charset="UTF-8">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133430056-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-133430056-1');
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="周振坤 Zhenkun Zhou">
+
+
+  <meta name="subtitle" content="周振坤">
+
+
+  <meta name="description" content="计算机博士，现为首都经济贸易大学统计学院数据科学系讲师，硕士研究生导师。 2020年于北京航空航天大学计算机学院获博士学位。 2018年至2019年国家公派联合培养于纽约城市大学。 研究方向包括计算社会科学、社交网络、自然语言处理、消费大数据。
+
+欢迎对我研究方向感兴趣的同学们报考研究生，确定录取后通过邮箱联系我。
+要求具备： 1）科研热情和创新思维❤️‍🔥； 2）较强编程能力💻。
+
+Zhenkun Zhou is an assistant professor in Capital University of Economics and Business. He received his Ph.D. degree of computer science from Beihang University in 2020 under supervision of Prof. Ke Xu. From 2018 to 2019, he visited the City University of New York in USA under supervision of Prof. Hernan A. Makse. His research focuses on computational social science, social networks, natural language processing and consumption big data.">
+
+
+
+<title>20个超人气配色网站 | Zhenkun Zhou</title>
+
+
+
+<link rel="icon" href="/favicon.ico">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/css/search.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ic:round-dark-mode" : "ic:round-light-mode");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ic:round-dark-mode" : "ic:round-light-mode");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+    $("#toggle-dark").click(toggleDark);
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ic:round-dark-mode" : "ic:round-light-mode"
+          );
+          toggleGiscusTheme();
+        }
+      });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body 
+  class="
+    bg-[var(--c-0)]
+    text-[var(--c-80)]
+  ">
+  <!-- The navigation bar -->
+<header class="
+    flex flex-row items-center
+    w-full
+    pr-4
+    z-10
+    border-b-[1px]
+    border-b-[var(--c-border)]
+    dark:bg-[var(--c-0)]
+    dark:border-b-[var(--c-0)]
+    gap-2
+    h-[var(--h-header)]
+    text-[var(--c-80)]
+">
+  <!-- Left part -->
+  <div class="overflow-hidden h-full flex flex-row items-center">
+    <!-- Site Title on the top left -->
+    <a href="/" class="
+            whitespace-nowrap
+            text-2xl
+            text-[var(--c-theme)]
+            hover:text-[var(--c-theme)]
+            pl-4
+            font-black
+            bg-gradient-to-r from-cyan-500
+            to-blue-500 bg-clip-text text-transparent
+          ">
+      Zhenkun Zhou
+    </a>
+  </div>
+  <!-- Div for pushing items to both sides -->
+  <div class="flex-1"></div>
+  <!-- Right part -->
+  <div class="flex flex-row items-center z-20 h-full">
+    <!-- Page links -->
+    <div class="hidden sm:flex flex-row h-full">
+      
+      
+      
+      
+      
+      
+      <a href="/./about" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:user-info-fill" width="22">
+        </iconify-icon>
+        
+        
+        <p>更多</p>
+        
+      </a>
+      
+      
+      
+      
+      
+      
+      <a href="/./archives" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:inbox-fill" width="22">
+        </iconify-icon>
+        
+        
+        <p>帖子</p>
+        
+      </a>
+      
+      
+      
+      
+      
+      
+      <a href="/./tags" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:tag-fill" width="22">
+        </iconify-icon>
+        
+        
+        <p>标签</p>
+        
+      </a>
+      
+      
+      
+      
+      
+      
+      <a href="/./index" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:home-2-fill" width="22">
+        </iconify-icon>
+        
+        
+      </a>
+      
+    </div>
+    <!-- Icons on the right -->
+    <div class="flex flex-row items-center">
+
+      <!-- TODO: Add search icon here -->
+
+      <!-- Dark/light toggle icon -->
+      <a class="flex group p-1" title="toggle theme" id="toggle-dark">
+        <iconify-icon class="transition-transform
+                    group-hover:rotate-[45deg]
+                    group-hover:scale-125
+                    group-hover:text-[var(--c-theme)]" width="24" id="theme-icon">
+        </iconify-icon>
+      </a>
+      <!-- Icon for dropout menu on small screens -->
+      <div class="flex p-1 mx-1 sm:hidden">
+        <a class="w-5 h-5" aria-hidden="true" id="open-menu">
+          <iconify-icon width="24" icon="mingcute:menu-fill" class="transition-transform hover:scale-125 hover:rotate-[5deg]">
+          </iconify-icon>
+        </a>
+        <a class="w-5 h-5 hidden" aria-hidden="true" id="close-menu">
+          <iconify-icon width="24" icon="mingcute:close-circle-fill" class="transition-transform hover:scale-125 hover:rotate-[80deg]">
+          </iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Dropdown menu on small screens -->
+<div id="menu-panel" class="
+        h-0
+        overflow-hidden
+        sm:hidden
+        w-full
+        z-10
+        rounded
+    ">
+  <div id="menu-content" class="
+        flex
+        flex-row
+        justify-center
+        items-center
+        font-bold
+        text-xl
+        border-b-[1px]
+        relative
+        z-20
+        border-[var(--c-sep)]
+        px-2
+        py-2
+        -translate-y-full
+        transition-transform
+        duration-200
+        ">
+    
+    
+    
+    <a href="/./about" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:user-info-fill" width="22">
+      </iconify-icon>
+      <p>
+        about
+      </p>
+    </a>
+    
+    
+    
+    
+    <a href="/./archives" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:inbox-fill" width="22">
+      </iconify-icon>
+      <p>
+        posts
+      </p>
+    </a>
+    
+    
+    
+    
+    <a href="/./tags" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:tag-fill" width="22">
+      </iconify-icon>
+      <p>
+        tags
+      </p>
+    </a>
+    
+    
+    
+    
+    <a href="/./index" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:home-2-fill" width="22">
+      </iconify-icon>
+      <p>
+        home
+      </p>
+    </a>
+    
+    
+  </div>
+</div>
+  <main>
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+  
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+    <!-- toc -->
+    
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-40 relative top-32 right-4 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- Post header before content -->
+  <header class="py-4">
+    <div class="flex flex-col gap-2 pt-4 md:pt-6">
+      <!-- Title -->
+      <div id="article-title" class="leading-snug">
+        <p class="text-3xl font-bold text-[var(--c-100)] mb-4">20个超人气配色网站</p>
+      </div>
+      <!-- Meta data -->
+      <div>
+        <section class="
+          flex flex-col gap-x-2 gap-y-1 text-sm text-[var(--c-100)]">
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <!-- Dates -->
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:add-circle-fill" ></iconify-icon>
+              Created: <time class="w-max">2024-04-15</time>
+            </div>
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:refresh-3-fill" ></iconify-icon>
+              Edited: <time class="w-max">2024-04-15</time>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-3">
+            <!-- Author -->
+            
+
+            <!-- Word count -->
+            <span class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
+              <span>2.2k words, 8 min</span>
+            </span>
+            <!-- Categories -->
+            
+          </div>
+        </section>
+      </div>
+      <!-- tags -->
+      <div>
+        
+<div class="flex flex-wrap gap-1">
+  
+    
+      <a href="/tags/%E5%B7%A5%E5%85%B7/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        工具
+      </a>
+    
+      <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        数据可视化
+      </a>
+    
+      <a href="/tags/%E6%9C%89%E8%B6%A3/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        有趣
+      </a>
+    
+  
+</div>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto dark:prose-invert">
+    <hr>
+<h2 id="created-2024-04-15T20-29-12-UTC-08-00-tags-配色-设计-设计资源-网站合集-source-https-www-digitaling-com-articles-757287-htmlauthor-数英网"><a href="#created-2024-04-15T20-29-12-UTC-08-00-tags-配色-设计-设计资源-网站合集-source-https-www-digitaling-com-articles-757287-htmlauthor-数英网" class="headerlink" title="created: 2024-04-15T20:29:12 (UTC +08:00)tags: [配色,设计,设计资源,网站合集]source: https://www.digitaling.com/articles/757287.htmlauthor: 数英网"></a>created: 2024-04-15T20:29:12 (UTC +08:00)<br>tags: [配色,设计,设计资源,网站合集]<br>source: <a target="_blank" rel="noopener" href="https://www.digitaling.com/articles/757287.html">https://www.digitaling.com/articles/757287.html</a><br>author: 数英网</h2><h1 id="20个超人气配色网站"><a href="#20个超人气配色网站" class="headerlink" title="20个超人气配色网站"></a>20个超人气配色网站</h1><blockquote>
+<h2 id="Excerpt"><a href="#Excerpt" class="headerlink" title="Excerpt"></a>Excerpt</h2><p>多款配色可直接下载使用。</p>
+</blockquote>
+<hr>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220418/1650273090178544.jpg" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"></p>
+<p><strong>“用色不太高级”、“色彩不够吸引人”、“颜色不够活泼”…</strong></p>
+<p>一个出色的设计作品，除了图文排版还要注意上色装修，<strong>颜色搭配是设计师最基础的技能</strong>。色彩有色相、明度、纯度三个属性，它是一个被低估的设计工具，用对了是“配色达人”，用错了则是“辣眼睛”，<strong>“世上没有不好看的颜色，只有不好看的搭配”。</strong></p>
+<p><strong>不会配色怎么办？什么样的颜色最迷人？怎么调配出克莱因的蓝、莫奈的灰？</strong>文章为大家介绍<strong>20个配色网站</strong>，既有自动检测色值帮你做好配色，又有各类主题色卡助你明晰设计特点，设计大神的必备网站让你轻松学会配色，一起来看看吧！</p>
+<h3 id="一、Flat-UI-Colors"><a href="#一、Flat-UI-Colors" class="headerlink" title="一、Flat UI Colors"></a>一、Flat UI Colors</h3><p>扁平化设计必备工具</p>
+<h4 id="网站地址："><a href="#网站地址：" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://flatuicolors.com/" title="Flat UI Colors">https://flatuicolors.com/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989891724844.jpg" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"></p>
+<h4 id="网站介绍："><a href="#网站介绍：" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Flat UI Colors</strong>是一个免费、高颜值的扁平化设计调色板，采集了<strong>13</strong>种色彩、<strong>14</strong>个调色板、<strong>280</strong>种颜色，支持在线切换HEX、RGB、RGBA，点击色块即可复制或吸取色值。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989891786811.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/1649906661315388.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/1649906661257693.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色">  </p>
+<h3 id="二、WebGradients"><a href="#二、WebGradients" class="headerlink" title="二、WebGradients"></a>二、WebGradients</h3><p>设计师的色彩百宝箱</p>
+<h4 id="网站地址：-1"><a href="#网站地址：-1" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://webgradients.com/" title="WebGradients">https://webgradients.com/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989891995373.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"></p>
+<h4 id="网站介绍：-1"><a href="#网站介绍：-1" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>WebGradients</strong>是<strong>180</strong>个线性渐变的集合，免费供商业或个人使用。每种渐变色都有一个文艺的标题并标明颜色属性，用户可以复制CSS跨浏览器代码，也可以下载成PSD、Sketch、PNG格式使用。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989891961851.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892025780.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892014355.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892181388.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892137070.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色">  </p>
+<h3 id="三、Palettable"><a href="#三、Palettable" class="headerlink" title="三、Palettable"></a>三、Palettable</h3><p>人工智能配色</p>
+<h4 id="网站地址：-2"><a href="#网站地址：-2" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://www.palettable.io/" title="Palettable">https://www.palettable.io/</a>  </p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/1649907574906023.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"></p>
+<h4 id="网站介绍：-2"><a href="#网站介绍：-2" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Palettable</strong>是一个在线配色生成神器，分析数百万设计配色知识，为用户智能推荐一个颜色，你可以选择Dislike or Like保留或移除当前的颜色，最终生成 5种协调的配色，复制链接或直接导出图片使用。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892228734.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892269551.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色">  </p>
+<h3 id="四、Adobe-Color-CC"><a href="#四、Adobe-Color-CC" class="headerlink" title="四、Adobe Color CC"></a>四、Adobe Color CC</h3><p>专注色彩</p>
+<h4 id="网站地址：-3"><a href="#网站地址：-3" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://color.adobe.com/zh/create/color-wheel" title="Adobe Color CC">https://color.adobe.com/zh/create/color-wheel</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892340345.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"></p>
+<h4 id="网站介绍：-3"><a href="#网站介绍：-3" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Adobe Color CC</strong>是Adobe官方出品的配色工具，包括多种配色规则：单色系，三元色，互补色等，提供<strong>4</strong>种色彩模式：RGB、CMYK、LAB、HSB，用户可以根据色轮来调整配色以确保色彩的和谐平衡。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892355474.png" alt="20 个超人气配色网站，轻松 Get 设计大师同款配色" title="20 个超人气配色网站，轻松 Get 设计大师同款配色"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892338666.png">  </p>
+<p><strong>“探索”</strong>与<strong>“趋势”</strong>功能，可以查看不同行业目前的色彩趋势，根据画面实景取色并自动生成渐变色的配色方案。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892473005.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892437150.png">  </p>
+<h3 id="五、中国色"><a href="#五、中国色" class="headerlink" title="五、中国色"></a>五、中国色</h3><p>中国传统颜色</p>
+<h4 id="网站地址：-4"><a href="#网站地址：-4" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="http://zhongguose.com/" title="中国色">http://zhongguose.com/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/1649907782971879.png" alt="1649907782971879.png" title="1649907782971879.png"></p>
+<h4 id="网站介绍：-4"><a href="#网站介绍：-4" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>中国色</strong>配色网站收集了最全的中国色，每种颜色都标有RGB和CMYK两种色彩参数，网站背景颜色会随所选主色而变，帮助使用者精准识色。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/1649907866458936.png" alt="1649907866458936.png" title="1649907866458936.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892530401.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892684450.png">  </p>
+<h3 id="六、Material-Palette"><a href="#六、Material-Palette" class="headerlink" title="六、Material Palette"></a>六、Material Palette</h3><p>致力于为设计师提供高质量颜色组合搭配</p>
+<h4 id="网站地址：-5"><a href="#网站地址：-5" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://www.materialpalette.com/" title="Material Palette">https://www.materialpalette.com/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892737261.png"></p>
+<h4 id="网站介绍：-5"><a href="#网站介绍：-5" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Material Palette</strong>是基于材质设计的调色板生成器，附带ICONS与条状配色方案，主要包括<strong>19</strong>种主色，选择其中<strong>1</strong>个或<strong>2</strong>个颜色就会自动生成一组配色方案并提供<strong>7</strong>种下载格式，设计师可以实时预览效果图并将提取的颜色融入到App UI中。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892888292.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892897420.png">  </p>
+<h3 id="七、Colourco"><a href="#七、Colourco" class="headerlink" title="七、Colourco"></a>七、Colourco</h3><p>基于网站设计的颜色搭配工具</p>
+<h4 id="网站地址：-6"><a href="#网站地址：-6" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://colourco.de/" title="Colourco">https://colourco.de/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892995702.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892922265.gif">  </p>
+<h4 id="网站介绍：-6"><a href="#网站介绍：-6" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Colourco</strong>可以帮助用户在线、快速地生成配色方案，根据鼠标移动的区域，颜色的亮度、色调、饱和度也会随之发生变化，可以直接修改参数进行实时调整。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892947805.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989892979900.png">  </p>
+<h3 id="八、ColorClaim"><a href="#八、ColorClaim" class="headerlink" title="八、ColorClaim"></a>八、ColorClaim</h3><p>设计师的灵感来源</p>
+<h4 id="网站地址：-7"><a href="#网站地址：-7" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://vanschneider.com/colors" title="ColorClaim">https://vanschneider.com/colors</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893020677.png"></p>
+<h4 id="网站介绍：-7"><a href="#网站介绍：-7" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>ColorClaim</strong>由德国专业设计师所创建，是设计师及入门小白的配色参考网站。目前已有<strong>120</strong>张色卡，每个色卡都是一个主色调与一个强调色组成，可以将图片复制粘贴到Photoshop或Sketch中，然后从中选择颜色创建moodboards，也可以直接下载完整的调色板到Photoshop或Illustrator中。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893012007.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893124487.png">  </p>
+<h3 id="九、Uigradients"><a href="#九、Uigradients" class="headerlink" title="九、Uigradients"></a>九、Uigradients</h3><p>渐变色在线 CSS 生成工具</p>
+<h4 id="网站地址：-8"><a href="#网站地址：-8" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://uigradients.com/" title="Uigradients">https://uigradients.com/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893263858.jpg"></p>
+<h4 id="网站介绍：-8"><a href="#网站介绍：-8" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Uigradients</strong>收录了近百种渐变色配色方案，可以直接下载使用或复制CSS代码用于其他设计，网站支持用户自行添加优质配色方案。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893240267.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893220406.png"><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893345247.png"><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893367337.png"><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893384687.png">  </p>
+<h3 id="十、Color-Leap"><a href="#十、Color-Leap" class="headerlink" title="十、Color Leap"></a>十、Color Leap</h3><p>色彩时光机</p>
+<h4 id="网站地址：-9"><a href="#网站地址：-9" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://colorleap.app/home" title="Color Leap">https://colorleap.app/home</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893436889.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893536702.png">  </p>
+<h4 id="网站介绍：-9"><a href="#网站介绍：-9" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Color Leap</strong>整理了公元2000年到上世纪60年代间的流行色彩，用户可以通过年份来切换主题色，在艺术品及名画中采集复古配色并一键复制，在获取配色灵感时也深入了解每个时代经常使用的颜色色码及特色文化。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893694328.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893682364.png">  </p>
+<h3 id="十一、Reeoo"><a href="#十一、Reeoo" class="headerlink" title="十一、Reeoo"></a>十一、Reeoo</h3><p>寻找灵感和案例的必备网站之一</p>
+<h4 id="网站地址：-10"><a href="#网站地址：-10" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://reeoo.com/" title="Reeoo">https://reeoo.com/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893767334.png"></p>
+<h4 id="网站介绍：-10"><a href="#网站介绍：-10" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Reeoo</strong>是一个专门收集优秀网页设计的网站，目前已收录了APP设计、Ipad设计、Icon设计等近千个网站案例。网站提供细分的主题板块，使用者可以通过颜色搜索成品案例，来欣赏不同角度下的色彩应用场景。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893719514.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893987735.jpg">  </p>
+<h2 id="十二、ColorSupply"><a href="#十二、ColorSupply" class="headerlink" title="**十二、ColorSupply"></a>**十二、ColorSupply</h2><p>设计师和插画师的颜色选择器**</p>
+<h4 id="网站地址：-11"><a href="#网站地址：-11" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="http://colorsupplyyy.com/" title="ColorSupply">http://colorsupplyyy.com</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989893989643.gif"></p>
+<h4 id="网站介绍：-11"><a href="#网站介绍：-11" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>ColorSupply</strong>收集了来自世界各地设计师的色彩搭配方案，按照五大配色：互补色、相似色、三色调、分离互补色、四色调来分类。使用者可以通过移动取色杆预览区域内的色值变化及ICON效果展示，点击色卡旁边的原点标志，则会直接跳转到设计师主页查看对方的更多作品。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894024997.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894082258.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894187064.png">  </p>
+<h3 id="十三、Duotone-by-ShapeFactory"><a href="#十三、Duotone-by-ShapeFactory" class="headerlink" title="十三、Duotone by ShapeFactory"></a>十三、Duotone by ShapeFactory</h3><p>在线双色调神器</p>
+<h4 id="网站地址：-12"><a href="#网站地址：-12" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://duotone.shapefactory.co/?f=10c5f8&t=6736dd&q=" title="Duotone by ShapeFactory">https://duotone.shapefactory.co/?f=10c5f8&t=6736dd&q=</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894277960.png"></p>
+<h4 id="网站介绍：-12"><a href="#网站介绍：-12" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Duotone by ShapeFactory</strong>左侧是色彩调整栏，右侧是图片预览，网站集成Unsplash免费素材库支持图片搜索功能，用户可以在线调整配色并下载使用。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894299330.gif"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894323796.png">  </p>
+<h2 id="十四、BrandColors"><a href="#十四、BrandColors" class="headerlink" title="**十四、BrandColors"></a>**十四、BrandColors</h2><p>最大的官方品牌颜色代码集合**</p>
+<h4 id="网站地址：-13"><a href="#网站地址：-13" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://brandcolors.net/" title="BrandColors">https://brandcolors.net/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894372427.png"></p>
+<h4 id="网站介绍：-13"><a href="#网站介绍：-13" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>BrandColors</strong>现已收录600多个品牌1600种颜色代码，包括Adidas、Adobe、Alibaba等全球知名企业，从A到Z进行排序，颜色值不支持RGB拷贝，但支持下载ASE、CSS、SCSS、LESS格式。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894434474.png"></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894459867.png"></p>
+<h3 id="十五、Happy-Hues"><a href="#十五、Happy-Hues" class="headerlink" title="十五、Happy Hues"></a>十五、Happy Hues</h3><p>一个调色板灵感网站</p>
+<h4 id="网站地址：-14"><a href="#网站地址：-14" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://www.happyhues.co/" title="happyhues">https://www.happyhues.co/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894540525.png"></p>
+<h4 id="网站介绍：-14"><a href="#网站介绍：-14" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p>这是一个在线实时展示灵感的网站，包括<strong>17</strong>种预设配色组、<strong>6</strong>个基础颜色术语、<strong>8</strong>种色彩心理学分析，点击左侧调色板时网页配色也会随之改变，单击即可复制十六进制代码，在这里你可以快速找到适合的配色指南。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894523726.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894627182.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894650931.png">  </p>
+<h2 id="十六、Eva-Design-System"><a href="#十六、Eva-Design-System" class="headerlink" title="**十六、Eva Design System"></a>**十六、Eva Design System</h2><p>AI智能配色神器**</p>
+<h4 id="网站地址：-15"><a href="#网站地址：-15" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://colors.eva.design/">https://colors.eva.design/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894784520.png"></p>
+<h4 id="网站介绍：-15"><a href="#网站介绍：-15" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p>网站适用于产品与品牌设计配色，选择1个主色网站会自动生成一套配色方案。点击调色盘自由取色，可以导出JPEG、JSON、Nebular Theme、UI Kitten Theme4种格式，网站支持调节日间与夜晚模式，是一个基于深度学习算法的配色网站。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894735619.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894822957.png">  </p>
+<h2 id="十七、Trianglify"><a href="#十七、Trianglify" class="headerlink" title="**十七、Trianglify"></a>**十七、Trianglify</h2><p>在线多边形背景图片生成器**</p>
+<h4 id="网站地址：-16"><a href="#网站地址：-16" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://trianglify.io/" title="Trianglify">https://trianglify.io/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894862321.gif"></p>
+<h4 id="网站介绍：-16"><a href="#网站介绍：-16" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>Trianglify</strong>提供多边形背景图片的在线制作与生成，用户可以自定义颜色、图片大小与图案强度，支持免费预览图片生成效果，导出高清PNG与SVG格式时需付费下载。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894917285.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989894993774.png">  </p>
+<h2 id="十八、艺术碎片"><a href="#十八、艺术碎片" class="headerlink" title="**十八、艺术碎片"></a>**十八、艺术碎片</h2><p>即时配色方案**</p>
+<h4 id="网站地址：-17"><a href="#网站地址：-17" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://artchips.art/" title="艺术碎片">https://artchips.art/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895074619.png"></p>
+<h4 id="网站介绍：-17"><a href="#网站介绍：-17" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>艺术碎片</strong>推荐使用谷歌Chrome浏览器，上传一张图片即会呈现单色、双色、对比色等百种预览配色方案，有助于用户快速为设计作品选取合适颜色。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895113289.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895192319.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895262355.png">  </p>
+<h2 id="十九、0To255"><a href="#十九、0To255" class="headerlink" title="**十九、0To255"></a>**十九、0To255</h2><p>简单的取色工具**</p>
+<h4 id="网站地址：-18"><a href="#网站地址：-18" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://0to255.com/ce4373" title="0To255">https://0to255.com/ce4373</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895381962.png"></p>
+<h4 id="网站介绍：-18"><a href="#网站介绍：-18" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p><strong>0To255</strong>主要是帮助网页设计师取色的平台，适用于印刷、网站设计等，单击网格中的一种颜色或输入十六进制代码，右侧就会呈现由暗到亮有序的色彩变化列表，便于设计师在不同饱和度中寻找重点色。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895377352.png"></p>
+<h2 id="二十、Duotones-Effect-Generator"><a href="#二十、Duotones-Effect-Generator" class="headerlink" title="**二十、Duotones Effect Generator"></a>**二十、Duotones Effect Generator</h2><p>配对和效果生成器**</p>
+<h4 id="网站地址：-19"><a href="#网站地址：-19" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://medialoot.com/duotones/">https://medialoot.com/duotones/</a></p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895469027.png"></p>
+<h4 id="网站介绍：-19"><a href="#网站介绍：-19" class="headerlink" title="网站介绍："></a><strong>网站介绍：</strong></h4><p>该网站适用于双色调配色设计，涵盖<strong>17</strong>种经典双色调，一键生成饱和度极佳的图片效果，用户可以选择在线图像或自己上传，点击便可直接下载使用。</p>
+<p><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895553343.png"><br><img src="https://file.digitaling.com/eImg/uimages/20220414/remote_164989895557472.jpg"></p>
+
+  </article>
+
+  <!-- prev and next -->
+  <div class="flex justify-between mt-4 pt-4
+    border-t border-[var(--c-sep)] text-sm
+    gap-2 text-[var(--c-50)]
+  ">
+    <div>
+      
+    </div>
+    <div>
+      
+        <a href="/2024/2024-04-10-Homework/"
+          class="
+            flex 
+            justify-center
+            hover:translate-x-1 
+            transition-transform
+            hover:text-[var(--c-100)]
+          "
+        >
+          大数据预处理第2次作业要求
+          <iconify-icon width="20" icon="mingcute:right-fill" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        var title = this.title;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        if (title) $(this).after('<span class="fancybox-title">' + title + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+  </main>
+  <footer class="flex flex-col mt-18 mb-12 items-center
+  text-[var(--c-50)] text-sm">
+  <div class="flex flex-row items-center my-12">
+    
+  </div>
+  <!-- busuanzi -->
+  <div class="mb-6">
+    
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="ic:round-person" width="18"></iconify-icon>
+    <span class="mr-1">访客 Visitors: </span>
+    <span id="busuanzi_value_site_uv"></span>
+  </div>
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="carbon:view-filled" width="18"></iconify-icon>
+    <span class="mx-1">浏览量 Page Views:</span>
+    <span id="busuanzi_value_site_pv"></span>
+  </div>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  </div>
+  <!-- copyright -->
+  <!-- <div class="flex flex-row items-center gap-2">
+    <a class="hover:underline"
+      target="_blank"
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    >
+      CC BY-NC-SA 4.0
+    </a>
+    <span>© 2022-2024</span>
+    <a class="hover:underline"
+    href="https://github.com/chen-yingfa"
+    target="_blank"
+    rel="noopener noreferrer">Zhenkun Zhou</a>
+  </div> -->
+  <!-- powered by -->
+  <div class="flex items-center gap-1">
+    <span>Powered by</span>
+    <a class="hover:underline"
+    href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/chen-yingfa/hexo-theme-fengye"
+    class="hover:underline"
+    target="_blank"
+      rel="noopener noreferrer"
+      >
+      Fengye
+    </a>
+  </div>
+
+</footer>
+
+  <div class="
+    back-to-top
+    fixed right-6
+    z-1024
+    -bottom-20
+    rounded-lg
+    font-bold
+    py-1 px-2
+    text-[var(--c-80)]
+    bg-[var(--c-20)]
+    cursor-pointer
+    text-center
+    drop-shadow-md
+  ">
+    <span class="flex justify-center items-center text-sm">
+      <span id="scrollpercent"><span>0</span> %</span>
+      <iconify-icon width="18" icon="mingcute:arrow-to-up-fill" id="go-top"></iconify-icon>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>
