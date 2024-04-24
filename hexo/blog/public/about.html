@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en,zh-CN,default">
+<head>
+  <meta charset="UTF-8">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133430056-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-133430056-1');
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="周振坤 Zhenkun Zhou">
+
+
+  <meta name="subtitle" content="周振坤">
+
+
+  <meta name="description" content="计算机博士，现为首都经济贸易大学统计学院数据科学系讲师，硕士研究生导师。 2020年于北京航空航天大学计算机学院获博士学位。 2018年至2019年国家公派联合培养于纽约城市大学。 研究方向包括计算社会科学、社交网络、自然语言处理、消费大数据。
+
+欢迎对我研究方向感兴趣的同学们报考研究生，确定录取后通过邮箱联系我。
+要求具备： 1）科研热情和创新思维❤️‍🔥； 2）较强编程能力💻。
+
+Zhenkun Zhou is an assistant professor in Capital University of Economics and Business. He received his Ph.D. degree of computer science from Beihang University in 2020 under supervision of Prof. Ke Xu. From 2018 to 2019, he visited the City University of New York in USA under supervision of Prof. Hernan A. Makse. His research focuses on computational social science, social networks, natural language processing and consumption big data.">
+
+
+
+<title>更多信息 | Zhenkun Zhou</title>
+
+
+
+<link rel="icon" href="/favicon.ico">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/css/search.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ic:round-dark-mode" : "ic:round-light-mode");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ic:round-dark-mode" : "ic:round-light-mode");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+    $("#toggle-dark").click(toggleDark);
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ic:round-dark-mode" : "ic:round-light-mode"
+          );
+          toggleGiscusTheme();
+        }
+      });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body 
+  class="
+    bg-[var(--c-0)]
+    text-[var(--c-80)]
+  ">
+  <!-- The navigation bar -->
+<header class="
+    flex flex-row items-center
+    w-full
+    pr-4
+    z-10
+    border-b-[1px]
+    border-b-[var(--c-border)]
+    dark:bg-[var(--c-0)]
+    dark:border-b-[var(--c-0)]
+    gap-2
+    h-[var(--h-header)]
+    text-[var(--c-80)]
+">
+  <!-- Left part -->
+  <div class="overflow-hidden h-full flex flex-row items-center">
+    <!-- Site Title on the top left -->
+    <a href="/" class="
+            whitespace-nowrap
+            text-2xl
+            text-[var(--c-theme)]
+            hover:text-[var(--c-theme)]
+            pl-4
+            font-black
+            bg-gradient-to-r from-cyan-500
+            to-blue-500 bg-clip-text text-transparent
+          ">
+      Zhenkun Zhou
+    </a>
+  </div>
+  <!-- Div for pushing items to both sides -->
+  <div class="flex-1"></div>
+  <!-- Right part -->
+  <div class="flex flex-row items-center z-20 h-full">
+    <!-- Page links -->
+    <div class="hidden sm:flex flex-row h-full">
+      
+      
+      
+      
+      
+      
+      <a href="/./about" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:user-info-fill" width="22">
+        </iconify-icon>
+        
+        
+        <p>更多</p>
+        
+      </a>
+      
+      
+      
+      
+      
+      
+      <a href="/./archives" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:inbox-fill" width="22">
+        </iconify-icon>
+        
+        
+        <p>帖子</p>
+        
+      </a>
+      
+      
+      
+      
+      
+      
+      <a href="/./tags" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:tag-fill" width="22">
+        </iconify-icon>
+        
+        
+        <p>标签</p>
+        
+      </a>
+      
+      
+      
+      
+      
+      
+      <a href="/./index" class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+        
+        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:home-2-fill" width="22">
+        </iconify-icon>
+        
+        
+      </a>
+      
+    </div>
+    <!-- Icons on the right -->
+    <div class="flex flex-row items-center">
+
+      <!-- TODO: Add search icon here -->
+
+      <!-- Dark/light toggle icon -->
+      <a class="flex group p-1" title="toggle theme" id="toggle-dark">
+        <iconify-icon class="transition-transform
+                    group-hover:rotate-[45deg]
+                    group-hover:scale-125
+                    group-hover:text-[var(--c-theme)]" width="24" id="theme-icon">
+        </iconify-icon>
+      </a>
+      <!-- Icon for dropout menu on small screens -->
+      <div class="flex p-1 mx-1 sm:hidden">
+        <a class="w-5 h-5" aria-hidden="true" id="open-menu">
+          <iconify-icon width="24" icon="mingcute:menu-fill" class="transition-transform hover:scale-125 hover:rotate-[5deg]">
+          </iconify-icon>
+        </a>
+        <a class="w-5 h-5 hidden" aria-hidden="true" id="close-menu">
+          <iconify-icon width="24" icon="mingcute:close-circle-fill" class="transition-transform hover:scale-125 hover:rotate-[80deg]">
+          </iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Dropdown menu on small screens -->
+<div id="menu-panel" class="
+        h-0
+        overflow-hidden
+        sm:hidden
+        w-full
+        z-10
+        rounded
+    ">
+  <div id="menu-content" class="
+        flex
+        flex-row
+        justify-center
+        items-center
+        font-bold
+        text-xl
+        border-b-[1px]
+        relative
+        z-20
+        border-[var(--c-sep)]
+        px-2
+        py-2
+        -translate-y-full
+        transition-transform
+        duration-200
+        ">
+    
+    
+    
+    <a href="/./about" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:user-info-fill" width="22">
+      </iconify-icon>
+      <p>
+        about
+      </p>
+    </a>
+    
+    
+    
+    
+    <a href="/./archives" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:inbox-fill" width="22">
+      </iconify-icon>
+      <p>
+        posts
+      </p>
+    </a>
+    
+    
+    
+    
+    <a href="/./tags" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:tag-fill" width="22">
+      </iconify-icon>
+      <p>
+        tags
+      </p>
+    </a>
+    
+    
+    
+    
+    <a href="/./index" class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+      <iconify-icon icon="mingcute:home-2-fill" width="22">
+      </iconify-icon>
+      <p>
+        home
+      </p>
+    </a>
+    
+    
+  </div>
+</div>
+  <main>
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+  
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+    <!-- toc -->
+    
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-40 relative top-32 right-4 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- Post header before content -->
+  <header class="py-4">
+    <div class="flex flex-col gap-2 pt-4 md:pt-6">
+      <!-- Title -->
+      <div id="article-title" class="leading-snug">
+        <p class="text-3xl font-bold text-[var(--c-100)] mb-4">更多信息</p>
+      </div>
+      <!-- Meta data -->
+      <div>
+        <section class="
+          flex flex-col gap-x-2 gap-y-1 text-sm text-[var(--c-100)]">
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <!-- Dates -->
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:add-circle-fill" ></iconify-icon>
+              Created: <time class="w-max">2021-09-14</time>
+            </div>
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:refresh-3-fill" ></iconify-icon>
+              Edited: <time class="w-max">2024-04-18</time>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-3">
+            <!-- Author -->
+            
+
+            <!-- Word count -->
+            <span class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
+              <span>809 words, 3 min</span>
+            </span>
+            <!-- Categories -->
+            
+          </div>
+        </section>
+      </div>
+      <!-- tags -->
+      <div>
+        
+<div class="flex flex-wrap gap-1">
+  
+</div>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto dark:prose-invert">
+    <img src="images/photo-2.png" alt="Jinzhou 2021" width="30%"/>
+
+<p><iconify-icon icon="mingcute:mail-fill"></iconify-icon> Email: <a href="mailto:&#122;&#104;&#x65;&#x6e;&#107;&#x75;&#x6e;&#64;&#99;&#x75;&#101;&#x62;&#46;&#101;&#100;&#117;&#x2e;&#99;&#110;">&#122;&#104;&#x65;&#x6e;&#107;&#x75;&#x6e;&#64;&#99;&#x75;&#101;&#x62;&#46;&#101;&#100;&#117;&#x2e;&#99;&#110;</a></p>
+<hr>
+<p>  计算机博士，现为首都经济贸易大学统计学院数据科学系讲师，硕士研究生导师。</p>
+<p>  研究方向：</p>
+<ul>
+<li>计算社会科学</li>
+<li>社交网络</li>
+<li>自然语言处理</li>
+<li>消费大数据</li>
+</ul>
+  <!-- Zhenkun Zhou is an assistant professor in Capital University of Economics and Business. 
+  He received his Ph.D. degree of computer science from Beihang University in 2020.
+
+  His research focuses on
+  - Computational social science
+  - Social networks
+  - Natural language processing
+  - Consumption big data -->
+
+
+
+<h2 id="近期代表作-Selected-Publications"><a href="#近期代表作-Selected-Publications" class="headerlink" title="近期代表作 Selected Publications"></a>近期代表作 Selected Publications</h2><img src="images/trolls.png" width="33%"/>
+
+<ul>
+<li>Suspended accounts align with the Internet Research Agency misinformation campaign to influence the 2016 US election. <strong>EPJ Data Science, 2024</strong></li>
+</ul>
+<img src="images/retail.jpg" width="33%"/>
+
+<ul>
+<li>Exploring the investment value of retail sales growth: Evidence from the China Retailer Alliance. <strong>Finance Research Letters, 2024</strong></li>
+</ul>
+<img src="images/doubleh.png" width="33%"/>
+
+<ul>
+<li>DoubleH: Twitter User Stance Detection via Bipartite Graph Neural Networks. <strong>The International AAAI Conference on Web and Social Media (ICWSM), 2024</strong></li>
+</ul>
+<img src="images/SA.png" width="33%"/>
+
+<ul>
+<li>Online Social Behavior Enhanced Detection of Political Stances in Tweets. <strong>The International AAAI Conference on Web and Social Media (ICWSM), 2024</strong></li>
+</ul>
+<img src="images/polarity.png" width="33%"/>
+
+<ul>
+<li>Political polarization of news media and influencers on Twitter in the 2016 and 2020 US presidential elections. <strong>Nature Human Behaviour, 2023</strong></li>
+</ul>
+<h2 id="人才培养-Teaching"><a href="#人才培养-Teaching" class="headerlink" title="人才培养 Teaching"></a>人才培养 Teaching</h2><h3 id="（1）计算社会科学研究组-Research-Group"><a href="#（1）计算社会科学研究组-Research-Group" class="headerlink" title="（1）计算社会科学研究组 Research Group"></a>（1）计算社会科学研究组 Research Group</h3><img src="images/group.jpg" width="33%"/>
+
+<ul>
+<li><p>研究生</p>
+<ul>
+<li>2021级：何宇馨，岳绪同</li>
+<li>2022级：戴晓雯，张静，陈洁</li>
+</ul>
+</li>
+<li><p>本科生</p>
+<ul>
+<li>2020级：李冠群，张雨骁</li>
+<li>2021级：陈相龙，周怡朱南</li>
+</ul>
+</li>
+<li><p>更多</p>
+<ul>
+<li><a href="./2024/group/">介绍</a> （有意读研请提前了解）</li>
+<li><a href="./2024/meeting/">组会回顾</a></li>
+<li><a href="./2024/tools/">工具推荐</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="（2）讲授课程-Lessons"><a href="#（2）讲授课程-Lessons" class="headerlink" title="（2）讲授课程 Lessons"></a>（2）讲授课程 Lessons</h3><ul>
+<li><p>本科</p>
+<ul>
+<li>统计编程基础（Statistical Programming）</li>
+<li>大数据预处理（Big Data Preprocessing）</li>
+</ul>
+</li>
+<li><p>研究生</p>
+<ul>
+<li>非结构化大数据分析（Unstructured Data Analyzing）</li>
+<li>数据可视化（Data Visualization）</li>
+</ul>
+</li>
+</ul>
+<h2 id="获奖-Awards"><a href="#获奖-Awards" class="headerlink" title="获奖 Awards"></a>获奖 Awards</h2><img src="images/competition.jpeg" width="33%"/>
+
+<ul>
+<li><p>首届全国高校青年教师数据科学与商业分析案例教学竞赛一等奖、优秀案例题材奖，《基于语言模型的零售商品分类》</p>
+</li>
+<li><p>第十三届市调大赛研究生组全国一等奖，优秀指导教师奖，《果茶相融，“酒”是不同——基于北京市的正大果茶酒消费市场研究》</p>
+</li>
+<li><p>第六届全国应用统计专业学位研究生案例大赛二等奖（指导教师），《基于KD-ERNIE语言模型的零售消费品多层分类算法研究》</p>
+</li>
+<li><p>第八届全国大数据与社会计算学术会议——社会计算创新大赛优秀奖，《社交网络文本抑郁指数构建与计算——以Twitter平台为例》</p>
+</li>
+<li><p>第九届全国大学生统计建模大赛北京赛区本科组——三等奖（指导老师），《北部沿海经济地区县域经济发展测度研究》</p>
+</li>
+<li><p>首都经济贸易大学2023年度校级优秀班主任</p>
+</li>
+</ul>
+<h2 id="社会服务-Social-services"><a href="#社会服务-Social-services" class="headerlink" title="社会服务 Social services"></a>社会服务 Social services</h2><h3 id="讲座与报告-Talk"><a href="#讲座与报告-Talk" class="headerlink" title="讲座与报告 Talk"></a>讲座与报告 Talk</h3><ul>
+<li>《浅谈数据科学在企业中的应用及价值》，2023年11月23日，浙江绍兴，有色金属工业统计会议</li>
+<li>《基于在线社交⽹络的立场挖掘与选举预测研究》，2022年9月7日，河南郑州，强智杯开源数据智能分析分论坛</li>
+<li>《基于在线社交⽹络的选举预测研究》，2021年7月18日，辽宁锦州，中国商业统计学会市场调查与教学研究分会第32届年会“东方艾学”海归论坛</li>
+</ul>
+<h3 id="专利与软著-Patent"><a href="#专利与软著-Patent" class="headerlink" title="专利与软著 Patent"></a>专利与软著 Patent</h3><ul>
+<li>商品品类自动标注软件（2023SR1489972）, 2023年11月</li>
+<li>基于大语言模型的零售商品分类与标签识别软件（2024SR0409008）, 2024年01月</li>
+</ul>
+<h3 id="Journal-Reviewer"><a href="#Journal-Reviewer" class="headerlink" title="Journal Reviewer"></a>Journal Reviewer</h3><ul>
+<li>IEEE Transactions on Neural Networks and Learning Systems</li>
+<li>IEEE Transactions on Computational Social Systems</li>
+<li>IEEE Transactions on Big Data</li>
+<li>Cyberpsychology, Behavior, and Social Networking</li>
+<li>Royal Society Open Science</li>
+<li>Big Data &amp; Society</li>
+<li>International Journal of Public Opinion Research</li>
+<li>Humanities &amp; Social Sciences Communications</li>
+<li>Journal of Computational Social Science</li>
+</ul>
+
+  </article>
+
+  <!-- prev and next -->
+  <div class="flex justify-between mt-4 pt-4
+    border-t border-[var(--c-sep)] text-sm
+    gap-2 text-[var(--c-50)]
+  ">
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+  </div>
+
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        var title = this.title;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        if (title) $(this).after('<span class="fancybox-title">' + title + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+  </main>
+  <footer class="flex flex-col mt-18 mb-12 items-center
+  text-[var(--c-50)] text-sm">
+  <div class="flex flex-row items-center my-12">
+    
+  </div>
+  <!-- busuanzi -->
+  <div class="mb-6">
+    
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="ic:round-person" width="18"></iconify-icon>
+    <span class="mr-1">访客 Visitors: </span>
+    <span id="busuanzi_value_site_uv"></span>
+  </div>
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="carbon:view-filled" width="18"></iconify-icon>
+    <span class="mx-1">浏览量 Page Views:</span>
+    <span id="busuanzi_value_site_pv"></span>
+  </div>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  </div>
+  <!-- copyright -->
+  <!-- <div class="flex flex-row items-center gap-2">
+    <a class="hover:underline"
+      target="_blank"
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    >
+      CC BY-NC-SA 4.0
+    </a>
+    <span>© 2022-2024</span>
+    <a class="hover:underline"
+    href="https://github.com/chen-yingfa"
+    target="_blank"
+    rel="noopener noreferrer">Zhenkun Zhou</a>
+  </div> -->
+  <!-- powered by -->
+  <div class="flex items-center gap-1">
+    <span>Powered by</span>
+    <a class="hover:underline"
+    href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/chen-yingfa/hexo-theme-fengye"
+    class="hover:underline"
+    target="_blank"
+      rel="noopener noreferrer"
+      >
+      Fengye
+    </a>
+  </div>
+
+</footer>
+
+  <div class="
+    back-to-top
+    fixed right-6
+    z-1024
+    -bottom-20
+    rounded-lg
+    font-bold
+    py-1 px-2
+    text-[var(--c-80)]
+    bg-[var(--c-20)]
+    cursor-pointer
+    text-center
+    drop-shadow-md
+  ">
+    <span class="flex justify-center items-center text-sm">
+      <span id="scrollpercent"><span>0</span> %</span>
+      <iconify-icon width="18" icon="mingcute:arrow-to-up-fill" id="go-top"></iconify-icon>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>

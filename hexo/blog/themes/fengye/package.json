@@ -1,0 +1,25 @@
+{
+  "name": "hexo-theme-fengye",
+  "version": "0.1.0",
+  "description": "一个简约的 Hexo 主题",
+  "repository": "chen-yingfa/hexo-theme-fengye",
+  "keywords": [
+    "hexo",
+    "theme",
+    "fengye"
+  ],
+  "license": "MIT",
+  "files": [
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "_config.yml"
+  ],
+  "scripts": {
+    "release": "bumpp --commit --tag --push && npm publish"
+  },
+  "dependencies": {
+    "bumpp": "^9.1.0"
+  }
+}

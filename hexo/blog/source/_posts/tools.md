@@ -1,0 +1,34 @@
+---
+title: 工具推荐
+tags: 
+- 科研
+- 工具
+---
+
+# 工具推荐
+
+## 文献管理 zotero
+
+- https://www.zotero.org/
+- https://zotero-chinese.com/
+
+## 代码编写
+
+- visual studio code: https://code.visualstudio.com/
+- https://developer.aliyun.com/article/1155404（连接服务器方法）
+
+## 笔记
+- obsidian: https://obsidian.md/download
+- marp: https://marp.app/#get-started
+
+## GPT
+- https://chat.openai.com/
+- https://sider.ai/invited?c=550e63504f90f545445edafb4de67eed
+- https://liao.world/zh 或 https://liaobots.work/
+- 文心一言：https://yiyan.baidu.com/
+- 智谱清言：https://chatglm.cn/
+- Kimi：https://kimi.moonshot.cn/
+- txyz：https://app.txyz.ai/
+
+## 🪜
+https://archive.org/download/clash_for_windows_pkg（停止更新）

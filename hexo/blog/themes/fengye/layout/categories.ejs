@@ -1,0 +1,59 @@
+<%#
+this page has two versions, which is shown is based on whether current
+page is 'category'.
+
+- url:'http://localhost:4000/category/' return false.
+- url:'http://localhost:4000/categories/*/' return true.
+
+The `/category/` page will shown all categories, and is the page you
+land on when you click on the "Categories" in the navigdation bar.
+
+The '/categories/*/' shows all posts with that category and is where you land
+when you click a category link on a post.
+
+How to add a category page.
+
+1. hexo new page "category"
+2. cd source/category/index.md
+3. Add the following front matter.
+
+---
+title: '''category'''
+date: 2019-06-09 09:56:49
+layout: category
+---
+ %>
+
+<% if (is_category()) { %>
+  <!-- 已经选择了category，显示给定category的所有文章 -->
+  <div class="flex flex-col items-center">
+    <div class="mt-6 flex flex-row items-center gap-2
+      text-2xl h-8 px-4">
+      <iconify-icon width="28" icon="mingcute:classify-2-fill">
+      </iconify-icon>
+      <span>
+        <p>Category: <%-page.category%></p>
+      </span>
+    </div>
+    <%- partial('archive', {pagination: config.category, index: true}) %>
+  </div>
+<% } else { %>
+  <!-- 显示所有存在的 category -->
+  <div class="flex flex-col gap-2 px-6 max-w-prose mx-auto md:px-0 my-8">
+    <div class="flex flex-row items-center gap-2">
+      <iconify-icon width="30" icon="mingcute:classify-2-fill">
+      </iconify-icon>
+      <h2 class="font-bold text-2xl">Categories</h2>
+    </div>
+    <div class="mt-2 flex flex-col">
+      <% site.categories.forEach(category =>{ %>
+        <a href="<%- url_for(category.path.toLowerCase()) %>" class="py-2 group">
+          <div class="flex flex-row gap-1 group-hover:translate-x-2 transition-transform group-hover:underline">
+            <p> <%- category.name %></p>
+            <span>(<%- category.posts.length %>)</span>
+          </div>
+        </a>
+      <% }) %>
+    </div>
+  </div>
+<% } %>

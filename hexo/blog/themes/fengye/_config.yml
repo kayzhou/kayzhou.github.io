@@ -1,0 +1,87 @@
+# Header
+nav:
+  about:
+    path: ./about
+    icon: mingcute:user-info-fill
+    text: 更多
+  posts:
+    path: ./archives
+    icon: mingcute:inbox-fill
+    text: 帖子
+  # publications:
+  #   path: ./publications
+  #   icon: mingcute:science-fill
+  #   text: Publications
+  # Projects: /projects
+  # categories:
+  #   path: ./categories
+  #   icon: mingcute:classify-2-fill
+  #   text: 类别
+  tags:
+    path: ./tags
+    icon: mingcute:tag-fill
+    text: 标签
+  home:
+    path: ./index
+    icon: mingcute:home-2-fill
+
+  # To add a new page, use hexo new page, then add another entry below.
+  # Each entry MUST have a path. In addition, it will render icon and/or text
+  # if they are provided. It will be an empty button if none of these are
+  # provided.
+
+email: zhenkun@cueb.edu.cn
+my_location: Capital University of Economics and Business, Beijing, China
+# cv_path: /pdf/cv.pdf
+show_featured_posts: true
+
+# favicon
+favicon: /favicon.ico
+
+# logo
+portrait: /images/photo-2.png  # Your profile image here
+show_profile_image: true
+
+# links
+# links:
+#   Github:
+#     link: https://www.github.com/chen-yingfa
+#     icon: mingcute:github-fill
+#   ZhiHu:
+#     link: https://www.zhihu.com/people/chen-ying-fa-34
+#     icon: ri:zhihu-line
+#   Twitter:
+#     link: https://www.twitter.com/DonnyChan123
+#     icon: mingcute:social-x-fill
+  # You can add more links below using the format above.
+
+# analytics
+google_analytics: UA-133430056-1
+baidu_analytics:
+
+# mathjax
+fancybox: true
+
+# mathjax
+mathjax: true
+
+# echarts
+echarts: true
+
+# busuanzi
+busuanzi: true
+
+# mermaid
+mermaid:
+  enable: true
+  # Available themes: default | dark | forest | neutral
+  theme: default
+
+# giscus
+giscus:
+  enable:
+  repo:
+  repo_id:
+  category:
+  category_id:
+  mapping:
